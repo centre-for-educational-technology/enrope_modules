@@ -1,0 +1,6 @@
+name: 'Enrope news'
+description: 'This is Enrope news module'
+package: Enrope
+type: module
+version: 1.0
+core: 8.x
