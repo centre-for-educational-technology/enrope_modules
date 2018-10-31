@@ -1,7 +1,7 @@
-hello.content:
+enrope_timeline.content:
   path: '/timeline'
   defaults:
     _controller: '\Drupal\enrope_timeline\Controller\EnropeTimelinePageController::content'
-    _title: 'Hello World'
+    _title: 'Project Timeline'
   requirements:
     _permission: 'access content'

@@ -1,6 +1,6 @@
-hello.admin:
-  title: 'Enrope Timeline module settings'
-  description: 'example of how to make an admin settings page link'
-  parent: system.admin_config_development
-  route_name: timeline.content
-  weight: 100
+enrope_timeline.menu:
+    title: 'Project timeline'
+    description: 'Project timeline'
+    parent: main
+    menu_name: main
+    route_name: enrope_timeline.content
