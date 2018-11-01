@@ -1,6 +1,6 @@
-enrope_timeline.menu:
+enrope_timeline_map.menu:
     title: 'Project timeline'
     description: 'Project timeline'
     parent: main
     menu_name: main
-    route_name: enrope_timeline.content
+    route_name: enrope_timeline_map.content

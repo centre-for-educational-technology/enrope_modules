@@ -1,0 +1,7 @@
+enrope_timeline_map.content:
+  path: '/timeline'
+  defaults:
+    _controller: '\Drupal\enrope_timeline_map\Controller\EnropeTimelinePageController::content'
+    _title: 'Project Timeline'
+  requirements:
+    _permission: 'access content'

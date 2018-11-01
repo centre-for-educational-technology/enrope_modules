@@ -1,0 +1,6 @@
+name: Enrope timeline and map module
+description: Creates a page showing Timeline, creates a block with a map of partners
+package: Enrope
+type: module
+version: 1.0
+core: 8.x

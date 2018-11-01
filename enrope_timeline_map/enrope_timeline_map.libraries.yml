@@ -1,0 +1,12 @@
+jqvmap:
+  version: 1.x
+  css:
+    theme:
+      jqvmap/dist/jqvmap.css: {}
+  js:
+    jqvmap/dist/jquery.vmap.js: {}
+    jqvmap/dist/maps/jquery.vmap.europe.js: {}
+    jqvmap/script.js: {}
+  dependencies:
+  - core/jquery
+  - core/drupalSettings
