@@ -4,6 +4,7 @@ jQuery('#vmap').vectorMap({
   color: '#007bff',
   hoverColor: '#868e96',
   enableZoom: false,
+  hoverOpacity: 1,
   selectedColor:'#e83e8c',
   selectedRegions: ['nl', 'de', 'tr', 'ee', 'gb', 'es', 'fr'],
   showTooltip: true,
