@@ -1,0 +1,6 @@
+name: Enrope menu module
+description: Contains custom menu links.
+package: Enrope
+type: module
+version: 1.0
+core: 8.x

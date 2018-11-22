@@ -23,7 +23,7 @@ class MapBlock extends BlockBase {
       '#theme' => 'enrope_map_block_template',
       '#attached' => array(
         'library' => array(
-          'enrope-timeline/jqvmap',
+          'enrope_timeline_map/jqvmap',
         ),
       ),
     );
