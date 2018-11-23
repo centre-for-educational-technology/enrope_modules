@@ -1,4 +1,11 @@
-enrope_menu.logout:
+enrope_menu.add_content:
+  title: 'Add Content'
+  description: 'Add Content'
+  parent: main
+  menu_name: main
+  route_name: node.add_page
   weight: 100
+enrope_menu.logout:
+  weight: 110
   menu_name: main
   class: Drupal\user\Plugin\Menu\LoginLogoutMenuLink
