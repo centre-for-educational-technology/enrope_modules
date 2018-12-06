@@ -11,6 +11,9 @@ function enrope_timeline_map_theme($existing, $type, $theme, $path) {
     'enrope_map_block_template' => array(
       'variables' => array(),
     ),
+    'enrope_logo_block_template' => array(
+      'variables' => array(),
+    ),
 
 
   );

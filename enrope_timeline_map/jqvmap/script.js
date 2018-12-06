@@ -1,11 +1,11 @@
 jQuery('#vmap').vectorMap({
   map: 'europe_en',
   backgroundColor: null,
-  color: '#007bff',
+  color: '#24CC85',
   hoverColor: '#868e96',
   enableZoom: false,
   hoverOpacity: 1,
-  selectedColor:'#e83e8c',
+  selectedColor:'#96ABFE',
   selectedRegions: ['nl', 'de', 'tr', 'ee', 'gb', 'es', 'fr'],
   showTooltip: true,
   onLabelShow: function(event, label, code)
