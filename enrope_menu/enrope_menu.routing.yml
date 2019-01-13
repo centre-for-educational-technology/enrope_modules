@@ -1,0 +1,5 @@
+enrope_menu.application_1:
+  path: '/applications/summer-2019-online-application-form'
+  requirements:
+    _permission: 'access content'
+    _role: 'authenticated'

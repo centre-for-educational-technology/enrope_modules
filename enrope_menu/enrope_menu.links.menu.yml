@@ -9,3 +9,9 @@ enrope_menu.logout:
   weight: 110
   menu_name: main
   class: Drupal\user\Plugin\Menu\LoginLogoutMenuLink
+enrope_menu.application_1:
+  title: 'Summer 2019 Online Application'
+  weight: 101
+  parent: main
+  menu_name: main
+  route_name: enrope_menu.application_1
