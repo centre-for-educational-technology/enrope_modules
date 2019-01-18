@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_languages_spoken
+  module:
+    - options
+    - user
+id: user.user.field_languages_spoken
+field_name: field_languages_spoken
+entity_type: user
+bundle: user
+label: Languages spoken
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

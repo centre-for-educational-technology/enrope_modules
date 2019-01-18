@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_expected_end_date_of_resea
+  module:
+    - datetime
+    - user
+id: user.user.field_expected_end_date_of_resea
+field_name: field_expected_end_date_of_resea
+entity_type: user
+bundle: user
+label: 'Expected end date of research project'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
