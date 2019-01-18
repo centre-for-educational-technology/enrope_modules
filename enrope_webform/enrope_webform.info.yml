@@ -1,0 +1,6 @@
+name: Enrope Summer 2019 Online Application Form
+description: Adds new Summer 2019 Online Application Form
+package: Enrope
+type: module
+version: 1.0
+core: 8.x

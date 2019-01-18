@@ -1,0 +1,272 @@
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: summer_2019_online_application_f
+title: 'Summer 2019 Online Application Form'
+description: 'ENROPE Intensive Study Week #1'
+category: ''
+elements: |
+  name:
+    '#type': textfield
+    '#title': Name
+    '#required': true
+  career_stage:
+    '#type': webform_buttons
+    '#title': 'Career Stage'
+    '#options':
+      MA: MA
+      Phd: Phd
+      Postdoc: Postdoc
+  _working_title_of_current_research_project:
+    '#type': textfield
+    '#title': '(Working) Title of Current Research Project'
+  research_approach_methodology:
+    '#type': webform_checkboxes_other
+    '#title': 'Research Approach/Methodology'
+    '#description': '<em><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Calibri&quot;,sans-serif">please tick one or more options</span></span></span></em>'
+    '#options':
+      conceptual/theory: conceptual/theory
+      historic: historic
+      'empirical (predominantly quantitative)': 'empirical (predominantly quantitative)'
+      'empirical (predominantly qualitative)': 'empirical (predominantly qualitative)'
+      'empirical (mixed methods)': 'empirical (mixed methods)'
+  progress_of_project:
+    '#type': checkboxes
+    '#title': 'Progress of Project'
+    '#description': '<em><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Calibri&quot;,sans-serif">please tick one or more options</span></span></span></em>'
+    '#options':
+      'exploration phase, e.g. definition of research topic and questions': 'exploration phase, e.g. definition of research topic and questions'
+      'initial phase, e.g. literature review, development of research design': 'initial phase, e.g. literature review, development of research design'
+      'field-work/data-collection phase (if applicable)': 'field-work/data-collection phase (if applicable)'
+      'elaboration phase, e.g. analysis and interpretation of data': 'elaboration phase, e.g. analysis and interpretation of data'
+      'final stage, e.g. writing-up, summarizing, editing ': 'final stage, e.g. writing-up, summarizing, editing '
+      'submitted (viva pending, if applicable)': 'submitted (viva pending, if applicable)'
+      'fully completed': 'fully completed'
+  project_description:
+    '#type': textarea
+    '#title': 'Project Description'
+    '#description': "<span style=\"font-size:11.0pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif\"><em>approx. 300 words</em><br />\r\nPlease state your research topic and central aims, research questions, methodology, research design plus a <strong>comment on how your project relates to issues of pluri-/multilingualism and education</strong></span></span></span>"
+  personal_statement:
+    '#type': textarea
+    '#title': 'Personal Statement'
+    '#description': "<span style=\"font-size:11.0pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif\"><em>approx. 150 words</em><br />\r\nHow does multilingualism impact on you as a researcher? And what do you hope to get out of the Intensive Study Week? </span></span></span>"
+  i_am_affiliated_to:
+    '#type': fieldset
+    '#title': 'I am affiliated to'
+    the_following_partner_institution_of_enrope_:
+      '#type': select
+      '#title': 'the following partner institution of ENROPE '
+      '#description': '<em><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Calibri&quot;,sans-serif">please choose from drop-down menu</span></span></span></em>'
+      '#options':
+        'Fryske Akademy Leeuwarden': 'Fryske Akademy Leeuwarden'
+        'Goethe-Universität Frankfurt': 'Goethe-Universität Frankfurt'
+        'İstanbul Üniversitesi-Cerrahpaşa': 'İstanbul Üniversitesi-Cerrahpaşa'
+        'Tallinna Ülikool': 'Tallinna Ülikool'
+        'University of Exeter': 'University of Exeter'
+        'Universitat Ramon Llull Barcelona': 'Universitat Ramon Llull Barcelona'
+        'Universität Siegen': 'Universität Siegen'
+        'Université Sorbonne Nouvelle Paris 3': 'Université Sorbonne Nouvelle Paris 3'
+        'Humboldt-Universität zu Berlin': 'Humboldt-Universität zu Berlin'
+    the_following_associated_partner_institution_of_enrope:
+      '#type': select
+      '#title': 'the following associated partner institution of ENROPE'
+      '#description': '<em>please choose from drop-down menu</em>'
+      '#options':
+        'Vrije Universiteit Brussel (Belgium)': 'Vrije Universiteit Brussel (Belgium)'
+        'Universiteti i Tiranës (Albania)': 'Universiteti i Tiranës (Albania)'
+        'University of the Western Cape (South Africa) ': 'University of the Western Cape (South Africa) '
+        'Stockholm University (Sweden)': 'Stockholm University (Sweden)'
+        'Aberystwyth University, Mercator Institute (Great Britain)': 'Aberystwyth University, Mercator Institute (Great Britain)'
+        'SOAS World Languages Institute, London (Great Britain)': 'SOAS World Languages Institute, London (Great Britain)'
+        'Universitat de Barcelona, CUSC (Spain)': 'Universitat de Barcelona, CUSC (Spain)'
+        'University Ibn Tofaïl of Kenitra (Morocco)': 'University Ibn Tofaïl of Kenitra (Morocco)'
+        'Universität Osnabrück (Germany)': 'Universität Osnabrück (Germany)'
+        'Zentrum für schulpraktische Lehrerbildung Siegen-Weidenau (Germany)': 'Zentrum für schulpraktische Lehrerbildung Siegen-Weidenau (Germany)'
+        'Bahçeşehir University (Turkey)': 'Bahçeşehir University (Turkey)'
+        'NaLTT, University of Namur (Belgium)': 'NaLTT, University of Namur (Belgium)'
+        'Université Chouaïb Doukkali d''El Jadida (Morocco)': 'Université Chouaïb Doukkali d''El Jadida (Morocco)'
+    other:
+      '#type': textfield
+      '#title': other
+  scholarship_option:
+    '#type': checkboxes
+    '#title': 'Scholarship Option'
+    '#description': '<em><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">please tick, if applicable</span></span></span></em>'
+    '#help': "<span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">Funding for the Intensive Study Week # 1 is available for early career researchers (MA, PhD, Postdoc) from all ENROPE partner institutions except for members of Humboldt-Universit&auml;t zu Berlin. Members of associated partner institutions are welcome to join the Intensive Study Week, but have to do so on their own expenses.</span></span></span><br />\r\n<span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">Funding comprises:</span></span></span>\r\n<ul>\r\n\t<li style=\"margin-top:0cm; margin-right:0cm; margin-bottom:.0001pt; margin:0cm 0cm 8pt\"><span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">an accomodation grant of up to 406 &euro; per person </span></span></span></li>\r\n\t<li style=\"margin-top:0cm; margin-right:0cm; margin-bottom:.0001pt; margin:0cm 0cm 8pt\"><span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">a travel grant of </span></span></span>\r\n\t<ul>\r\n\t\t<li style=\"margin-top:0cm; margin-right:0cm; margin-bottom:.0001pt; margin:0cm 0cm 8pt\"><span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">up to 275 &euro; for participants from Leeuwarden, Istanbul, Tallinn, Exeter, Barcelona, and Paris; </span></span></span></li>\r\n\t\t<li style=\"margin:0cm 0cm 8pt\"><span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">up to 180 &euro; for participants from Siegen and Frankfurt.</span></span></span></li>\r\n\t</ul>\r\n\t</li>\r\n</ul>"
+    '#options':
+      'I’m applying for a scholarship': 'I’m applying for a scholarship'
+      'I attach a letter': 'I attach a letter -- Letter (pdf-format) from my local ENROPE representative confirming my affiliation with an ENROPE partner institution'
+  letter_from_my_local_enrope_representative:
+    '#type': webform_document_file
+    '#title': 'Letter from my local ENROPE representative'
+    '#states':
+      visible:
+        ':input[name="scholarship_option[I attach a letter]"]':
+          checked: true
+    '#uri_scheme': public
+    '#file_extensions': pdf
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace:
+    webform_routes: {  }
+    node_routes: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: authenticated
+  draft_multiple: false
+  draft_auto_save: true
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles:
+      - moderator
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles:
+      - moderator
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles:
+      - moderator
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles:
+      - moderator
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
