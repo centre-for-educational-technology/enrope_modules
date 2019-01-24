@@ -15,3 +15,8 @@ enrope_menu.application_1:
   parent: main
   menu_name: main
   route_name: enrope_menu.application_1
+enrope_menu.profile:
+  title: 'My Profile'
+  weight: 109
+  menu_name: main
+  route_name: user.page
