@@ -10,8 +10,8 @@ id: user.user.field_languages_spoken
 field_name: field_languages_spoken
 entity_type: user
 bundle: user
-label: Languages spoken
-description: ''
+label: 'Languages spoken'
+description: 'When you hold down the “Ctrl” key and click on items in the list, each item remain highlighted. You can select more than one item from any part of the list using Ctrl/Command+click'
 required: false
 translatable: true
 default_value: {  }

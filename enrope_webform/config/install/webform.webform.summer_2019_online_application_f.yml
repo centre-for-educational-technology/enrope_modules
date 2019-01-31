@@ -1,6 +1,8 @@
 langcode: en
 status: open
 dependencies: {  }
+_core:
+  default_config_hash: QgdWVtZ6yw1zFtk5d_eiPrQZDERgaoLi6r1b23c38as
 open: null
 close: null
 weight: 0
@@ -94,23 +96,35 @@ elements: |
     other:
       '#type': textfield
       '#title': other
-  scholarship_option:
-    '#type': checkboxes
+  scholarship_option_fieldset:
+    '#type': fieldset
     '#title': 'Scholarship Option'
-    '#description': '<em><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">please tick, if applicable</span></span></span></em>'
-    '#help': "<span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">Funding for the Intensive Study Week # 1 is available for early career researchers (MA, PhD, Postdoc) from all ENROPE partner institutions except for members of Humboldt-Universit&auml;t zu Berlin. Members of associated partner institutions are welcome to join the Intensive Study Week, but have to do so on their own expenses.</span></span></span><br />\r\n<span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">Funding comprises:</span></span></span>\r\n<ul>\r\n\t<li style=\"margin-top:0cm; margin-right:0cm; margin-bottom:.0001pt; margin:0cm 0cm 8pt\"><span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">an accomodation grant of up to 406 &euro; per person </span></span></span></li>\r\n\t<li style=\"margin-top:0cm; margin-right:0cm; margin-bottom:.0001pt; margin:0cm 0cm 8pt\"><span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">a travel grant of </span></span></span>\r\n\t<ul>\r\n\t\t<li style=\"margin-top:0cm; margin-right:0cm; margin-bottom:.0001pt; margin:0cm 0cm 8pt\"><span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">up to 275 &euro; for participants from Leeuwarden, Istanbul, Tallinn, Exeter, Barcelona, and Paris; </span></span></span></li>\r\n\t\t<li style=\"margin:0cm 0cm 8pt\"><span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:Calibri,sans-serif\">up to 180 &euro; for participants from Siegen and Frankfurt.</span></span></span></li>\r\n\t</ul>\r\n\t</li>\r\n</ul>"
-    '#options':
-      'I’m applying for a scholarship': 'I’m applying for a scholarship'
-      'I attach a letter': 'I attach a letter -- Letter (pdf-format) from my local ENROPE representative confirming my affiliation with an ENROPE partner institution'
-  letter_from_my_local_enrope_representative:
-    '#type': webform_document_file
-    '#title': 'Letter from my local ENROPE representative'
-    '#states':
-      visible:
-        ':input[name="scholarship_option[I attach a letter]"]':
-          checked: true
-    '#uri_scheme': public
-    '#file_extensions': pdf
+    scholarship_option:
+      '#type': checkboxes
+      '#title': 'Select Option'
+      '#options':
+        'I’m applying for a scholarship': 'I’m applying for a scholarship'
+        'I attach a letter': 'I attach a letter -- Letter (pdf-format) from my local ENROPE '
+    letter_from_my_local_enrope_representative:
+      '#type': url
+      '#title': 'Letter from my local ENROPE representative'
+      '#description': 'A link to PDF document. Eg. Dropbox or Google Drive'
+      '#states':
+        visible:
+          ':input[name="scholarship_option[I attach a letter]"]':
+            checked: true
+          ':input[name="i_will_e_mail_the_letter_to_info_enrope_eu_instead_"]':
+            unchecked: true
+    i_will_e_mail_the_letter_to_info_enrope_eu_instead_:
+      '#type': checkbox
+      '#title': 'I will e-mail the letter to info@enrope.eu instead  '
+      '#description': '<a href="mailto:info@enrope.eu">info@enrope.eu</a>'
+      '#states':
+        visible:
+          ':input[name="scholarship_option[I attach a letter]"]':
+            checked: true
+          ':input[name="letter_from_my_local_enrope_representative"]':
+            empty: true
 css: ''
 javascript: ''
 settings:
@@ -119,7 +133,7 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -143,7 +157,7 @@ settings:
   form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
-  form_access_denied: default
+  form_access_denied: login
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
@@ -222,6 +236,7 @@ settings:
 access:
   create:
     roles:
+      - anonymous
       - authenticated
     users: {  }
     permissions: {  }
