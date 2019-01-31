@@ -125,6 +125,9 @@ elements: |
             checked: true
           ':input[name="letter_from_my_local_enrope_representative"]':
             empty: true
+  captcha:
+    '#type': captcha
+    '#captcha_type': recaptcha/reCAPTCHA
 css: ''
 javascript: ''
 settings:
