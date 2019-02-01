@@ -104,7 +104,7 @@ elements: |
       '#title': 'Select Option'
       '#options':
         'I’m applying for a scholarship': 'I’m applying for a scholarship'
-        'I attach a letter': 'I attach a letter -- Letter (pdf-format) from my local ENROPE '
+        'I attach a letter': 'I attach a letter -- Letter (pdf-format) from my local ENROPE representative'
     letter_from_my_local_enrope_representative:
       '#type': url
       '#title': 'Letter from my local ENROPE representative'
