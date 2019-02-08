@@ -1,0 +1,6 @@
+name: Enrope group module
+description: Customises Group module
+package: Enrope
+type: module
+version: 1.0
+core: 8.x

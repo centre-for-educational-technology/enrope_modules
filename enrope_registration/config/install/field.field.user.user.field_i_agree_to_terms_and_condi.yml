@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_i_agree_to_terms_and_condi
+  module:
+    - user
+id: user.user.field_i_agree_to_terms_and_condi
+field_name: field_i_agree_to_terms_and_condi
+entity_type: user
+bundle: user
+label: 'I agree to terms and conditions and privacy policy'
+description: "<br>\r\n<a href=\"https://enrope.eu/terms-and-conditions\" target=\"_blank\">Read Terms and Conditions</a>\r\n<br>\r\n<a href=\"https://enrope.eu/privacy-policy\" target=\"_blank\">Read Privacy Policy</a>"
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Agree
+  off_label: Disagree
+field_type: boolean
