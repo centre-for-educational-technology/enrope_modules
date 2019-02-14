@@ -2,3 +2,11 @@ enrope_menu.application_1:
   path: '/applications/summer-2019-online-application-form'
   requirements:
     _permission: 'access content'
+enrope_menu.all_groups:
+  path: '/groups'
+  requirements:
+    _permission: 'access content'
+enrope_menu.my_groups:
+  path: '/my-groups'
+  requirements:
+    _permission: 'access content'

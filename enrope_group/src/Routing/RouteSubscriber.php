@@ -14,14 +14,17 @@ class RouteSubscriber extends RouteSubscriberBase {
    * {@inheritdoc}
    */
   protected function alterRoutes(RouteCollection $collection) {
-    // Change path '/user/login' to '/login'.
+
+    //Disable Add node button on group nodes page
     if ($route = $collection->get('entity.group_content.group_node_relate_page')) {
       $route->setRequirement('_access', 'FALSE');
     }
 
-    if($route = $collection->get('entity.group_content.group_node_add_page')){
-      $route->setRequirement('_access', 'FALSE');
-    }
+    //Disable Relate existing node button on group nodes page
+    //Using Group operations block instead
+//    if($route = $collection->get('entity.group_content.group_node_add_page')){
+//      $route->setRequirement('_access', 'FALSE');
+//    }
 
 
 

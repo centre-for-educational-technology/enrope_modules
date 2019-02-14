@@ -20,3 +20,13 @@ enrope_menu.profile:
   weight: 109
   menu_name: main
   route_name: user.page
+enrope_menu.all_groups:
+  title: 'All groups'
+  weight: 108
+  menu_name: main
+  route_name: enrope_menu.all_groups
+enrope_menu.my_groups:
+  title: 'My groups'
+  weight: 107
+  menu_name: main
+  route_name: enrope_menu.my_groups
