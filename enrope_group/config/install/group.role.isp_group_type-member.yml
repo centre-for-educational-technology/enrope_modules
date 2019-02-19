@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.isp_group_type
+id: isp_group_type-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: isp_group_type
+permissions_ui: true
+permissions:
+  0: 'view group'
+  1: 'update own group_membership content'
+  2: 'leave group'
+  3: 'create group_node:article entity'
+  4: 'delete own group_node:article entity'
+  5: 'update own group_node:article entity'
+  6: 'view group_node:article entity'
+  7: 'create group_node:page entity'
+  8: 'delete own group_node:page entity'
+  9: 'update own group_node:page entity'
+  10: 'view group_node:page entity'
+  11: 'create group_node:article content'
+  12: 'create group_node:page content'
+  13: 'create group_node:file entity'
+  14: 'delete own group_node:file entity'
+  15: 'update own group_node:file entity'
+  16: 'view group_node:file entity'
+  17: 'create group_node:file content'
+  18: 'create group_node:resources entity'
+  19: 'delete own group_node:resources entity'
+  20: 'update own group_node:resources entity'
+  21: 'view group_node:resources entity'
+  22: 'create group_node:resources content'
+  23: 'access group_node overview'
+  24: 'view group_membership content'
+  26: 'create group_node:discussion_board entity'
+  27: 'delete own group_node:discussion_board entity'
+  28: 'update own group_node:discussion_board entity'
+  29: 'view group_node:discussion_board entity'
+  30: 'create group_node:discussion_board content'

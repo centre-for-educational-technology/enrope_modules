@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: isp_group_type
+label: 'ISP group type'
+description: ''
+creator_membership: true
+creator_wizard: true
+creator_roles: {  }

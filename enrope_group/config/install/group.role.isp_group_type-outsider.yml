@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.isp_group_type
+id: isp_group_type-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: isp_group_type
+permissions_ui: true
+permissions:
+  - 'view group'
+  - 'join group'
+  - 'access group_node overview'

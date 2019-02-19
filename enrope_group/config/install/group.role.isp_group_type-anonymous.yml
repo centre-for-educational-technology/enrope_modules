@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.isp_group_type
+id: isp_group_type-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: isp_group_type
+permissions_ui: true
+permissions:
+  - 'view group'

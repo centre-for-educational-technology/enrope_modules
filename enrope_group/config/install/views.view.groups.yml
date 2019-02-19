@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.group.gro
   module:
     - group
 id: groups
@@ -71,6 +73,9 @@ display:
           class: ''
       row:
         type: 'entity:group'
+        options:
+          relationship: none
+          view_mode: gro
       fields:
         label:
           table: groups_field_data

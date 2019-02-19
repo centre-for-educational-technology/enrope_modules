@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.isp_group_type
+id: isp_group_type-supervisor
+label: supervisor
+weight: 4
+internal: false
+audience: member
+group_type: isp_group_type
+permissions_ui: true
+permissions:
+  - 'view group'
+  - 'administer members'
+  - 'view group_membership content'
+  - 'access group_node overview'
+  - 'create group_node:article entity'
+  - 'delete any group_node:article entity'
+  - 'delete own group_node:article entity'
+  - 'update any group_node:article entity'
+  - 'update own group_node:article entity'
+  - 'view group_node:article entity'
+  - 'view unpublished group_node:article entity'
+  - 'delete group'
+  - 'edit group'
+  - 'create group_node:page entity'
+  - 'delete any group_node:page entity'
+  - 'delete own group_node:page entity'
+  - 'update any group_node:page entity'
+  - 'update own group_node:page entity'
+  - 'view group_node:page entity'
+  - 'view unpublished group_node:page entity'
+  - 'update own group_membership content'
+  - 'leave group'
+  - 'create group_node:article content'
+  - 'create group_node:page content'
+  - 'create group_node:file entity'
+  - 'delete any group_node:file entity'
+  - 'delete own group_node:file entity'
+  - 'update any group_node:file entity'
+  - 'update own group_node:file entity'
+  - 'view group_node:file entity'
+  - 'view unpublished group_node:file entity'
+  - 'create group_node:file content'
+  - 'create group_node:resources entity'
+  - 'delete any group_node:resources entity'
+  - 'delete own group_node:resources entity'
+  - 'update any group_node:resources entity'
+  - 'update own group_node:resources entity'
+  - 'view group_node:resources entity'
+  - 'view unpublished group_node:resources entity'
+  - 'create group_node:resources content'
+  - 'create group_node:discussion_board entity'
+  - 'delete any group_node:discussion_board entity'
+  - 'delete own group_node:discussion_board entity'
+  - 'update any group_node:discussion_board entity'
+  - 'update own group_node:discussion_board entity'
+  - 'view group_node:discussion_board entity'
+  - 'view unpublished group_node:discussion_board entity'
+  - 'create group_node:discussion_board content'
