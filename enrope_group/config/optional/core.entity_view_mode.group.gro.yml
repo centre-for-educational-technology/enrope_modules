@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - enrope_group
+  enforced:
+    module:
+      - enrope_group
+id: group.gro
+label: 'Group teaser'
+targetEntityType: group
+cache: true

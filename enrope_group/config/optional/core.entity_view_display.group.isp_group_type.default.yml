@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.isp_group_type.field_description
+    - group.type.isp_group_type
+  module:
+    - text
+    - enrope_group
+  enforced:
+    module:
+      - enrope_group
+id: group.isp_group_type.default
+targetEntityType: group
+bundle: isp_group_type
+mode: default
+content:
+  field_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  changed: true
+  created: true
+  label: true
+  uid: true

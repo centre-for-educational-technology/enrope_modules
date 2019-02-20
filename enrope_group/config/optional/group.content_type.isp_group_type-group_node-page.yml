@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.isp_group_type
+    - node.type.page
+  module:
+    - gnode
+    - node
+    - enrope_group
+  enforced:
+    module:
+      - enrope_group
+id: isp_group_type-group_node-page
+label: 'ISP group type: Group node (Basic page)'
+description: 'Adds <em class="placeholder">Basic page</em> content to groups both publicly and privately.'
+group_type: isp_group_type
+content_plugin: 'group_node:page'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

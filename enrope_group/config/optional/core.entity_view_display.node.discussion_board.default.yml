@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.discussion_board.body
+    - field.field.node.discussion_board.comment
+    - node.type.discussion_board
+  module:
+    - comment
+    - text
+    - user
+    - enrope_group
+  enforced:
+    module:
+      - enrope_group
+id: node.discussion_board.default
+targetEntityType: node
+bundle: discussion_board
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment:
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
