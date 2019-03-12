@@ -311,7 +311,7 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      subject: _default
+      subject: 'Email from ENROPE.eu'
       body: 'Thank you for your submission at ENROPE.eu'
       excluded_elements: {  }
       ignore_access: false
