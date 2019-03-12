@@ -13,7 +13,125 @@ id: summer_2019_online_application_f
 title: 'Summer 2019 Online Application Form'
 description: 'ENROPE Intensive Study Week #1'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#required': true\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\ncareer_stage:\n  '#type': webform_buttons\n  '#title': 'Career Stage'\n  '#options':\n    MA: MA\n    Phd: Phd\n    Postdoc: Postdoc\n_working_title_of_current_research_project:\n  '#type': textfield\n  '#title': '(Working) Title of Current Research Project'\nresearch_approach_methodology:\n  '#type': webform_checkboxes_other\n  '#title': 'Research Approach/Methodology'\n  '#description': '<em><span style=\"font-size:11.0pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif\">please tick one or more options</span></span></span></em>'\n  '#options':\n    conceptual/theory: conceptual/theory\n    historic: historic\n    'empirical (predominantly quantitative)': 'empirical (predominantly quantitative)'\n    'empirical (predominantly qualitative)': 'empirical (predominantly qualitative)'\n    'empirical (mixed methods)': 'empirical (mixed methods)'\nprogress_of_project:\n  '#type': checkboxes\n  '#title': 'Progress of Project'\n  '#description': '<em><span style=\"font-size:11.0pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif\">please tick one or more options</span></span></span></em>'\n  '#options':\n    'exploration phase, e.g. definition of research topic and questions': 'exploration phase, e.g. definition of research topic and questions'\n    'initial phase, e.g. literature review, development of research design': 'initial phase, e.g. literature review, development of research design'\n    'field-work/data-collection phase (if applicable)': 'field-work/data-collection phase (if applicable)'\n    'elaboration phase, e.g. analysis and interpretation of data': 'elaboration phase, e.g. analysis and interpretation of data'\n    'final stage, e.g. writing-up, summarizing, editing ': 'final stage, e.g. writing-up, summarizing, editing '\n    'submitted (viva pending, if applicable)': 'submitted (viva pending, if applicable)'\n    'fully completed': 'fully completed'\nproject_description:\n  '#type': textarea\n  '#title': 'Project Description'\n  '#description': \"<span style=\\\"font-size:11.0pt\\\"><span style=\\\"line-height:107%\\\"><span style=\\\"font-family:&quot;Calibri&quot;,sans-serif\\\"><em>approx. 300 words</em><br />\\r\\nPlease state your research topic and central aims, research questions, methodology, research design plus a <strong>comment on how your project relates to issues of pluri-/multilingualism and education</strong></span></span></span>\"\npersonal_statement:\n  '#type': textarea\n  '#title': 'Personal Statement'\n  '#description': \"<span style=\\\"font-size:11.0pt\\\"><span style=\\\"line-height:107%\\\"><span style=\\\"font-family:&quot;Calibri&quot;,sans-serif\\\"><em>approx. 150 words</em><br />\\r\\nHow does multilingualism impact on you as a researcher? And what do you hope to get out of the Intensive Study Week? </span></span></span>\"\ni_am_affiliated_to:\n  '#type': fieldset\n  '#title': 'I am affiliated to'\n  the_following_partner_institution_of_enrope_:\n    '#type': select\n    '#title': 'the following partner institution of ENROPE '\n    '#description': '<em><span style=\"font-size:11.0pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif\">please choose from drop-down menu</span></span></span></em>'\n    '#options':\n      'Fryske Akademy Leeuwarden': 'Fryske Akademy Leeuwarden'\n      'Goethe-Universität Frankfurt': 'Goethe-Universität Frankfurt'\n      'İstanbul Üniversitesi-Cerrahpaşa': 'İstanbul Üniversitesi-Cerrahpaşa'\n      'Tallinna Ülikool': 'Tallinna Ülikool'\n      'University of Exeter': 'University of Exeter'\n      'Universitat Ramon Llull Barcelona': 'Universitat Ramon Llull Barcelona'\n      'Universität Siegen': 'Universität Siegen'\n      'Université Sorbonne Nouvelle Paris 3': 'Université Sorbonne Nouvelle Paris 3'\n      'Humboldt-Universität zu Berlin': 'Humboldt-Universität zu Berlin'\n  the_following_associated_partner_institution_of_enrope:\n    '#type': select\n    '#title': 'the following associated partner institution of ENROPE'\n    '#description': '<em>please choose from drop-down menu</em>'\n    '#options':\n      'Vrije Universiteit Brussel (Belgium)': 'Vrije Universiteit Brussel (Belgium)'\n      'Universiteti i Tiranës (Albania)': 'Universiteti i Tiranës (Albania)'\n      'University of the Western Cape (South Africa) ': 'University of the Western Cape (South Africa) '\n      'Stockholm University (Sweden)': 'Stockholm University (Sweden)'\n      'Aberystwyth University, Mercator Institute (Great Britain)': 'Aberystwyth University, Mercator Institute (Great Britain)'\n      'SOAS World Languages Institute, London (Great Britain)': 'SOAS World Languages Institute, London (Great Britain)'\n      'Universitat de Barcelona, CUSC (Spain)': 'Universitat de Barcelona, CUSC (Spain)'\n      'University Ibn Tofaïl of Kenitra (Morocco)': 'University Ibn Tofaïl of Kenitra (Morocco)'\n      'Universität Osnabrück (Germany)': 'Universität Osnabrück (Germany)'\n      'Zentrum für schulpraktische Lehrerbildung Siegen-Weidenau (Germany)': 'Zentrum für schulpraktische Lehrerbildung Siegen-Weidenau (Germany)'\n      'Bahçeşehir University (Turkey)': 'Bahçeşehir University (Turkey)'\n      'NaLTT, University of Namur (Belgium)': 'NaLTT, University of Namur (Belgium)'\n      'Université Chouaïb Doukkali d''El Jadida (Morocco)': 'Université Chouaïb Doukkali d''El Jadida (Morocco)'\n  other:\n    '#type': textfield\n    '#title': other\nscholarship_option_fieldset:\n  '#type': fieldset\n  '#title': 'Scholarship Option'\n  scholarship_option:\n    '#type': checkboxes\n    '#title': 'Select Option'\n    '#options':\n      'I’m applying for a scholarship': 'I’m applying for a scholarship'\n      'I attach a letter': 'I attach a letter -- Letter (pdf-format) from my local ENROPE representative'\n  letter_from_my_local_enrope_representative:\n    '#type': url\n    '#title': 'Letter from my local ENROPE representative'\n    '#description': 'A link to PDF document. Eg. Dropbox or Google Drive'\n    '#states':\n      visible:\n        ':input[name=\"scholarship_option[I attach a letter]\"]':\n          checked: true\n        ':input[name=\"i_will_e_mail_the_letter_to_info_enrope_eu_instead_\"]':\n          unchecked: true\n  i_will_e_mail_the_letter_to_info_enrope_eu_instead_:\n    '#type': checkbox\n    '#title': 'I will e-mail the letter to info@enrope.eu instead  '\n    '#description': '<a href=\"mailto:info@enrope.eu\">info@enrope.eu</a>'\n    '#states':\n      visible:\n        ':input[name=\"scholarship_option[I attach a letter]\"]':\n          checked: true\n        ':input[name=\"letter_from_my_local_enrope_representative\"]':\n          empty: true\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA"
+elements: |
+  name:
+    '#type': textfield
+    '#title': Name
+    '#required': true
+  email:
+    '#type': email
+    '#title': Email
+    '#required': true
+  career_stage:
+    '#type': webform_buttons
+    '#title': 'Career Stage'
+    '#options':
+      MA: MA
+      Phd: Phd
+      Postdoc: Postdoc
+  _working_title_of_current_research_project:
+    '#type': textfield
+    '#title': '(Working) Title of Current Research Project'
+  research_approach_methodology:
+    '#type': webform_checkboxes_other
+    '#title': 'Research Approach/Methodology'
+    '#description': '<em><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Calibri&quot;,sans-serif">please tick one or more options</span></span></span></em>'
+    '#options':
+      conceptual/theory: conceptual/theory
+      historic: historic
+      'empirical (predominantly quantitative)': 'empirical (predominantly quantitative)'
+      'empirical (predominantly qualitative)': 'empirical (predominantly qualitative)'
+      'empirical (mixed methods)': 'empirical (mixed methods)'
+  progress_of_project:
+    '#type': checkboxes
+    '#title': 'Progress of Project'
+    '#description': '<em><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Calibri&quot;,sans-serif">please tick one or more options</span></span></span></em>'
+    '#options':
+      'exploration phase, e.g. definition of research topic and questions': 'exploration phase, e.g. definition of research topic and questions'
+      'initial phase, e.g. literature review, development of research design': 'initial phase, e.g. literature review, development of research design'
+      'field-work/data-collection phase (if applicable)': 'field-work/data-collection phase (if applicable)'
+      'elaboration phase, e.g. analysis and interpretation of data': 'elaboration phase, e.g. analysis and interpretation of data'
+      'final stage, e.g. writing-up, summarizing, editing ': 'final stage, e.g. writing-up, summarizing, editing '
+      'submitted (viva pending, if applicable)': 'submitted (viva pending, if applicable)'
+      'fully completed': 'fully completed'
+  project_description:
+    '#type': textarea
+    '#title': 'Project Description'
+    '#description': "<span style=\"font-size:11.0pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif\"><em>approx. 300 words</em><br />\r\nPlease state your research topic and central aims, research questions, methodology, research design plus a <strong>comment on how your project relates to issues of pluri-/multilingualism and education</strong></span></span></span>"
+  personal_statement:
+    '#type': textarea
+    '#title': 'Personal Statement'
+    '#description': "<span style=\"font-size:11.0pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif\"><em>approx. 150 words</em><br />\r\nHow does multilingualism impact on you as a researcher? And what do you hope to get out of the Intensive Study Week? </span></span></span>"
+  i_am_affiliated_to:
+    '#type': fieldset
+    '#title': 'I am affiliated to'
+    the_following_partner_institution_of_enrope_:
+      '#type': select
+      '#title': 'the following partner institution of ENROPE '
+      '#description': '<em><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Calibri&quot;,sans-serif">please choose from drop-down menu</span></span></span></em>'
+      '#options':
+        'Fryske Akademy Leeuwarden': 'Fryske Akademy Leeuwarden'
+        'Goethe-Universität Frankfurt': 'Goethe-Universität Frankfurt'
+        'İstanbul Üniversitesi-Cerrahpaşa': 'İstanbul Üniversitesi-Cerrahpaşa'
+        'Tallinna Ülikool': 'Tallinna Ülikool'
+        'University of Exeter': 'University of Exeter'
+        'Universitat Ramon Llull Barcelona': 'Universitat Ramon Llull Barcelona'
+        'Universität Siegen': 'Universität Siegen'
+        'Université Sorbonne Nouvelle Paris 3': 'Université Sorbonne Nouvelle Paris 3'
+        'Humboldt-Universität zu Berlin': 'Humboldt-Universität zu Berlin'
+    the_following_associated_partner_institution_of_enrope:
+      '#type': select
+      '#title': 'the following associated partner institution of ENROPE'
+      '#description': '<em>please choose from drop-down menu</em>'
+      '#options':
+        'Vrije Universiteit Brussel (Belgium)': 'Vrije Universiteit Brussel (Belgium)'
+        'Universiteti i Tiranës (Albania)': 'Universiteti i Tiranës (Albania)'
+        'University of the Western Cape (South Africa) ': 'University of the Western Cape (South Africa) '
+        'Stockholm University (Sweden)': 'Stockholm University (Sweden)'
+        'Aberystwyth University, Mercator Institute (Great Britain)': 'Aberystwyth University, Mercator Institute (Great Britain)'
+        'SOAS World Languages Institute, London (Great Britain)': 'SOAS World Languages Institute, London (Great Britain)'
+        'Universitat de Barcelona, CUSC (Spain)': 'Universitat de Barcelona, CUSC (Spain)'
+        'University Ibn Tofaïl of Kenitra (Morocco)': 'University Ibn Tofaïl of Kenitra (Morocco)'
+        'Universität Osnabrück (Germany)': 'Universität Osnabrück (Germany)'
+        'Zentrum für schulpraktische Lehrerbildung Siegen-Weidenau (Germany)': 'Zentrum für schulpraktische Lehrerbildung Siegen-Weidenau (Germany)'
+        'Bahçeşehir University (Turkey)': 'Bahçeşehir University (Turkey)'
+        'NaLTT, University of Namur (Belgium)': 'NaLTT, University of Namur (Belgium)'
+        'Université Chouaïb Doukkali d''El Jadida (Morocco)': 'Université Chouaïb Doukkali d''El Jadida (Morocco)'
+    other:
+      '#type': textfield
+      '#title': other
+  scholarship_option_fieldset:
+    '#type': fieldset
+    '#title': 'Scholarship Option'
+    scholarship_option:
+      '#type': checkboxes
+      '#title': 'Select Option'
+      '#options':
+        'I’m applying for a scholarship': 'I’m applying for a scholarship'
+        'I attach a letter': 'I attach a letter -- Letter (pdf-format) from my local ENROPE representative'
+    letter_from_my_local_enrope_representative:
+      '#type': url
+      '#title': 'Letter from my local ENROPE representative'
+      '#description': 'A link to PDF document. Eg. Dropbox or Google Drive'
+      '#states':
+        visible:
+          ':input[name="scholarship_option[I attach a letter]"]':
+            checked: true
+          ':input[name="i_will_e_mail_the_letter_to_info_enrope_eu_instead_"]':
+            unchecked: true
+    i_will_e_mail_the_letter_to_info_enrope_eu_instead_:
+      '#type': checkbox
+      '#title': 'I will e-mail the letter to info@enrope.eu instead  '
+      '#description': '<a href="mailto:info@enrope.eu">info@enrope.eu</a>'
+      '#states':
+        visible:
+          ':input[name="scholarship_option[I attach a letter]"]':
+            checked: true
+          ':input[name="letter_from_my_local_enrope_representative"]':
+            empty: true
+  captcha:
+    '#type': captcha
+    '#captcha_type': recaptcha/reCAPTCHA
 css: ''
 javascript: ''
 settings:
@@ -173,4 +291,38 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    label: Email
+    handler_id: email
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: 'Thank you for your submission at ENROPE.eu'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
