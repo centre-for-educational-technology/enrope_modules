@@ -1,3 +1,4 @@
+uuid: ec558675-a403-4ba4-a572-c5cd5d9c76cf
 langcode: en
 status: true
 dependencies:
@@ -8,10 +9,6 @@ dependencies:
     - gnode
     - group
     - node
-    - enrope_group
-  enforced:
-    module:
-      - enrope_group
 _core:
   default_config_hash: ZSKjHkl45YTbsYHiq_H7py04GDuX95t-GOHAAb8ZFbk
 id: group_articles_
@@ -78,9 +75,9 @@ display:
       style:
         type: html_list
         options:
-          grouping: {  }
           row_class: ''
           default_row_class: true
+          uses_fields: false
           type: ul
           wrapper_class: item-list
           class: ''
@@ -596,6 +593,20 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: date
+        label:
+          id: label
+          table: group_content_field_data
+          field: label
+          relationship: group_content
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: Title
+          entity_type: group_content
+          entity_field: label
+          plugin_id: standard
       header: {  }
       footer: {  }
       empty:

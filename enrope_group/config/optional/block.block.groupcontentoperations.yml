@@ -1,0 +1,36 @@
+uuid: e98917bc-b850-4822-9764-8bf105ba662a
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - enrope_group
+    - system
+  theme:
+    - enrope
+id: groupcontentoperations
+theme: enrope
+region: content
+weight: -2
+provider: null
+plugin: group_content_operations
+settings:
+  id: group_content_operations
+  label: 'Group content operations'
+  provider: enrope_group
+  label_display: '0'
+  context_mapping:
+    group: '@group.group_route_context:group'
+visibility:
+  'entity_bundle:group':
+    id: 'entity_bundle:group'
+    bundles:
+      isp_group_type: isp_group_type
+    negate: false
+    context_mapping:
+      group: '@group.group_route_context:group'
+  request_path:
+    id: request_path
+    pages: '/group/*/*'
+    negate: false
+    context_mapping: {  }

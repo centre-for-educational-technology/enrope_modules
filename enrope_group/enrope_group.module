@@ -9,11 +9,19 @@ function enrope_group_form_alter(&$form, FormStateInterface $form_state, $form_i
   }
 }
 function _custom_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  //Redirect to group nodes after join
+  //Redirect to group main page after join
   $group_content = $form_state->getFormObject()->getEntity();
   $group = $group_content->getGroup();
 
-  $url = url::fromUserInput('/group/' . $group->id() . '/nodes');
+  $url = url::fromUserInput('/group/' . $group->id());
   $form_state->setRedirectUrl($url);
 }
 
+
+
+// Hide Delete tab of group
+function enrope_group_menu_local_tasks_alter(&$data, $route_name) {
+
+  unset($data['tabs'][0]['group.delete_form']);
+
+}
