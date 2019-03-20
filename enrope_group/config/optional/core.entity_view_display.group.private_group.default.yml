@@ -1,0 +1,35 @@
+uuid: 7fe0e7c0-0427-437f-8aa2-23c0a649a522
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.private_group.field_cover_image
+    - field.field.group.private_group.field_description
+    - group.type.private_group
+  module:
+    - text
+id: group.private_group.default
+targetEntityType: group
+bundle: private_group
+mode: default
+content:
+  field_description:
+    weight: -4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  label:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  field_cover_image: true
+  uid: true

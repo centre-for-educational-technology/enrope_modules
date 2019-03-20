@@ -1,17 +1,17 @@
-uuid: 0fb5ec43-1308-4de4-be5f-df51277cc70d
+uuid: 48f64e5b-10c5-4cea-8379-cac5df0cbba9
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.group.gro
-    - field.field.group.isp_group_type.field_cover_image
-    - field.field.group.isp_group_type.field_description
-    - group.type.isp_group_type
+    - field.field.group.private_group.field_cover_image
+    - field.field.group.private_group.field_description
+    - group.type.private_group
   module:
     - text
-id: group.isp_group_type.gro
+id: group.private_group.gro
 targetEntityType: group
-bundle: isp_group_type
+bundle: private_group
 mode: gro
 content:
   field_description:

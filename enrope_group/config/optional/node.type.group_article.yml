@@ -1,0 +1,17 @@
+uuid: 8bc520e5-b5cf-4d6e-ac9c-ef8dacc822d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Group article'
+type: group_article
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

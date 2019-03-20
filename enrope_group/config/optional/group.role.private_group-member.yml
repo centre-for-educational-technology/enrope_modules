@@ -1,0 +1,54 @@
+uuid: 056f6c1f-2329-4eef-968e-29848463a4ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.private_group
+id: private_group-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: private_group
+permissions_ui: true
+permissions:
+  0: 'view group'
+  1: 'update own group_membership content'
+  2: 'leave group'
+  3: 'view group_membership content'
+  4: 'access group_node overview'
+  5: 'create group_node:article entity'
+  6: 'delete own group_node:article entity'
+  7: 'update own group_node:article entity'
+  8: 'view group_node:article entity'
+  9: 'create group_node:article content'
+  10: 'create group_node:page entity'
+  11: 'delete own group_node:page entity'
+  12: 'update own group_node:page entity'
+  13: 'view group_node:page entity'
+  14: 'create group_node:page content'
+  15: 'create group_node:discussion_board entity'
+  16: 'delete own group_node:discussion_board entity'
+  17: 'update own group_node:discussion_board entity'
+  18: 'view group_node:discussion_board entity'
+  19: 'create group_node:discussion_board content'
+  20: 'create group_node:file entity'
+  21: 'delete own group_node:file entity'
+  22: 'update own group_node:file entity'
+  23: 'view group_node:file entity'
+  24: 'create group_node:file content'
+  25: 'create group_node:resources entity'
+  26: 'delete own group_node:resources entity'
+  27: 'update own group_node:resources entity'
+  28: 'view group_node:resources entity'
+  29: 'create group_node:resources content'
+  45: 'create group_node:group_article entity'
+  46: 'delete own group_node:group_article entity'
+  47: 'update own group_node:group_article entity'
+  48: 'view group_node:group_article entity'
+  49: 'create group_node:group_article content'
+  50: 'create group_node:group_page entity'
+  51: 'delete own group_node:group_page entity'
+  52: 'update own group_node:group_page entity'
+  53: 'view group_node:group_page entity'
+  54: 'create group_node:group_page content'

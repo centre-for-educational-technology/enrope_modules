@@ -1,0 +1,6 @@
+name: Enrope breadcrumb
+package: Enrope
+description: Customises breadcrumbs so that group and group content would be shown in breadcrumbs
+type: module
+version: 1.0
+core: 8.x

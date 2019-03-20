@@ -1,1 +1,2 @@
-# Enrope Group module that customises Drupal 8 Group
+# Enrope Group
+Module that customises and extends Drupal 8 Group

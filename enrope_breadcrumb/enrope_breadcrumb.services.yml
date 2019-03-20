@@ -1,0 +1,5 @@
+services:
+  enrope_breadcrumb.breadcrumb:
+    class: Drupal\enrope_breadcrumb\EnropeBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }

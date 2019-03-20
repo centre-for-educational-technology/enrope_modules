@@ -25,3 +25,46 @@ function enrope_group_menu_local_tasks_alter(&$data, $route_name) {
   unset($data['tabs'][0]['group.delete_form']);
 
 }
+
+/**
+ * Implements hook_path_update().
+ *
+ * Track path alias changes to published node translations that are related
+ * to a group.
+ */
+//function enrope_group_path_update($path) {
+//  if (empty($path['source']) || !\Drupal::moduleHandler()->moduleExists('pathauto')) {
+//    return;
+//  }
+//
+//  // Extract nid from the source path.
+//  if (preg_match('@^\/node\/(\d+)$@', $path['source'], $node_matches)) {
+//    // Load the node.
+//    $nid = $node_matches[1];
+//    $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+//    if ($node) {
+//      $pathauto = \Drupal::service('pathauto.generator');
+//      $entity_mgr = \Drupal::service('entity.repository');
+//      $langcode = !empty($path['langcode']) ? $path['langcode'] : \Drupal::service('language.default')->get()->getId();
+//      // Get the node translation.
+//      $node_translation = $entity_mgr->getTranslationFromContext($node, $langcode);
+//
+//      // Only update published nodes.
+//      if ($node_translation->isPublished()) {
+//        // Find the group relations for this node.
+//        $relation_storage = \Drupal::entityTypeManager()->getStorage('group_content');
+//        // Clear group_content static cache to clear stale data for the node.
+//        $relation_storage->resetCache();
+//        // Load group_content for the node.
+//        $relations = $relation_storage->loadByEntity($node_translation);
+//        if ($relations) {
+//          // Update the alias for each relation in the same language.
+//          foreach ($relations as $relation) {
+//            $relation_update = $entity_mgr->getTranslationFromContext($relation, $langcode);
+//            $pathauto->updateEntityAlias($relation_update, 'update');
+//          }
+//        }
+//      }
+//    }
+//  }
+//}

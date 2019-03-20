@@ -75,14 +75,14 @@ class GroupContentOperationsBlock extends BlockBase {
 
   private function getPluginIdByRouteName($route_name){
 
-    if(strstr($route_name, 'articles')){
-      return "group_node:article";
+    if(strstr($route_name, 'group_article')){
+      return "group_node:group_article";
     }
     elseif (strstr($route_name, 'files')){
       return "group_node:file";
     }
-    elseif (strstr($route_name, 'pages')){
-      return "group_node:page";
+    elseif (strstr($route_name, 'group_page')){
+      return "group_node:group_page";
     }
     elseif (strstr($route_name, 'resources')){
       return "group_node:resources";

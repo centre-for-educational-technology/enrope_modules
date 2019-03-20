@@ -1,9 +1,13 @@
+uuid: 458b48c4-8998-4dc0-9af9-d3369b39bf49
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: sIaN3PjO4eXGX9Oq69H7xVFquBfOf8soOfnuQt7Qkjk
 id: isp_group_type
-label: 'ISP group type'
+label: 'Public group'
 description: ''
 creator_membership: true
-creator_wizard: true
-creator_roles: {  }
+creator_wizard: false
+creator_roles:
+  - isp_group_type-supervisor

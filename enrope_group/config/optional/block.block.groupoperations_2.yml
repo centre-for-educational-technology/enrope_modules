@@ -1,3 +1,4 @@
+uuid: 19f6423b-97f1-4966-9cd7-ce3dde33ff95
 langcode: en
 status: true
 dependencies:
@@ -5,23 +6,19 @@ dependencies:
     - ctools
     - group
     - system
-    - enrope_group
-  enforced:
-    module:
-      - enrope_group
   theme:
     - enrope
 id: groupoperations_2
 theme: enrope
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: group_operations
 settings:
   id: group_operations
   label: 'Group operations'
   provider: group
-  label_display: visible
+  label_display: '0'
   context_mapping:
     group: '@group.group_route_context:group'
 visibility:
@@ -29,6 +26,7 @@ visibility:
     id: 'entity_bundle:group'
     bundles:
       isp_group_type: isp_group_type
+      private_group: private_group
     negate: false
     context_mapping:
       group: '@group.group_route_context:group'

@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - node.type.article
+    - node.type.group_article
   module:
     - gnode
     - group
@@ -546,7 +546,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            article: article
+            group_article: group_article
           group: 1
           exposed: false
           expose:

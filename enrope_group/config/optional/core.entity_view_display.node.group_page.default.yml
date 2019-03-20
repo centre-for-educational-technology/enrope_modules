@@ -1,0 +1,40 @@
+uuid: dda64f2b-eb22-4961-b7b3-6531ed0653fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.group_page.body
+    - field.field.node.group_page.comment
+    - node.type.group_page
+  module:
+    - comment
+    - text
+    - user
+id: node.group_page.default
+targetEntityType: node
+bundle: group_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

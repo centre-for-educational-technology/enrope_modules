@@ -1,0 +1,17 @@
+uuid: 1a86bdd0-4d9d-455b-96a9-1d2c01377f38
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.private_group
+id: private_group-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: private_group
+permissions_ui: true
+permissions:
+  - 'view group'
+  - 'join group'
+  - 'access group_node overview'

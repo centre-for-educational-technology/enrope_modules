@@ -1,4 +1,4 @@
-uuid: e98917bc-b850-4822-9764-8bf105ba662a
+uuid: 53e33bb2-1f8c-44f2-84f3-8f8088ced606
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: groupcontentoperations
 theme: enrope
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: group_content_operations
 settings:
@@ -26,6 +26,7 @@ visibility:
     id: 'entity_bundle:group'
     bundles:
       isp_group_type: isp_group_type
+      private_group: private_group
     negate: false
     context_mapping:
       group: '@group.group_route_context:group'

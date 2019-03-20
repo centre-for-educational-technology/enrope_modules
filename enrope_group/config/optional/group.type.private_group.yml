@@ -1,0 +1,11 @@
+uuid: 43e19b5f-6ddf-4c28-9af1-7f3f2eb5d116
+langcode: en
+status: true
+dependencies: {  }
+id: private_group
+label: 'Private group'
+description: ''
+creator_membership: true
+creator_wizard: false
+creator_roles:
+  - private_group-supervisor

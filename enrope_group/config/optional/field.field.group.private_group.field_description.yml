@@ -1,0 +1,21 @@
+uuid: 15b1f8e8-cb9e-4ef6-bac6-60381f0e4565
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_description
+    - group.type.private_group
+  module:
+    - text
+id: group.private_group.field_description
+field_name: field_description
+entity_type: group
+bundle: private_group
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
