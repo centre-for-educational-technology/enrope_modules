@@ -47,8 +47,6 @@ class EnropeBreadcrumbBuilder implements BreadcrumbBuilderInterface
 
     }
 
-    error_log(print_r($group_content->getGroup()->id(), true));
-
     $breadcrumb = new Breadcrumb();
 
     $breadcrumb->addLink(Link::createFromRoute($group_title, 'entity.group.canonical', ['group' => $group_id]));
@@ -67,8 +65,8 @@ class EnropeBreadcrumbBuilder implements BreadcrumbBuilderInterface
 
     if ($content_type == 'group_article') {
       return ['name' => "Articles", 'route' => "view.group_articles_.page_1"];
-    } elseif ($content_type == 'files') {
-      return ["name" => "Files", 'route' => "view.file.page_1"];
+    } elseif ($content_type == 'file') {
+      return ["name" => "Files", 'route' => "view.files.page_1"];
     } elseif ($content_type =='group_page') {
       return ["name" => 'Pages', 'route' => "view.group_pages.page_1"];
     } elseif ($content_type == 'resources') {

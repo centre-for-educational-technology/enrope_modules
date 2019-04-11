@@ -30,3 +30,8 @@ enrope_menu.my_groups:
   weight: 107
   menu_name: main
   route_name: enrope_menu.my_groups
+enrope_menu.add_group:
+  title: 'Add group'
+  weight: 108
+  menu_name: main
+  route_name: enrope_menu.add_group

@@ -9,4 +9,13 @@ enrope_menu.all_groups:
 enrope_menu.my_groups:
   path: '/my-groups'
   requirements:
+    _user_is_logged_in: 'TRUE'
+enrope_menu.add_group:
+  path: '/group/add'
+  defaults:
+    _title: 'Add group'
+    _controller: '\Drupal\Core\Entity\Controller\EntityController::addPage'
+    entity_type_id: 'group'
+  requirements:
     _permission: 'access content'
+    _role: 'moderator+administrator'

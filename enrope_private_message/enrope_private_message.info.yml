@@ -1,0 +1,8 @@
+name: Enrope private message
+package: Enrope
+description: Customises Private Message module
+type: module
+version: 1.0
+core: 8.x
+dependencies:
+  - private_message
