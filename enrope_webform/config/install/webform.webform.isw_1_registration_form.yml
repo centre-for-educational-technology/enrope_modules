@@ -1,0 +1,169 @@
+uuid: d695fbe0-7aec-49d3-bc4a-7ed7e1f2a5fa
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: isw_1_registration_form
+title: 'ISW#1 Registration Form'
+description: ''
+category: ''
+elements: "first_name:\n  '#type': textfield\n  '#title': 'First name'\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last name'\n  '#required': true\ntitle:\n  '#type': select\n  '#title': Title\n  '#options':\n    BA: BA\n    MA/Med: MA/Med\n    PhD: PhD\n    Dr.: Dr.\n    Prof.: Prof.\n    none: none\n  '#required': true\nuniversity_research_institute_school:\n  '#type': fieldset\n  '#title': 'University / research institute / school'\n  '#required': true\n  name:\n    '#type': textfield\n    '#title': Name\n    '#required': true\n  city:\n    '#type': textfield\n    '#title': City\n    '#required': true\n  country:\n    '#type': textfield\n    '#title': Country\n    '#required': true\n  department:\n    '#type': textfield\n    '#title': Department\n    '#required': true\n  function:\n    '#type': radios\n    '#title': Function\n    '#options':\n      'MA/Med student': 'MA/Med student'\n      PhD-candidate: PhD-candidate\n      'Research Fellow': 'Research Fellow'\n      'Post-Doctoral Researcher': 'Post-Doctoral Researcher'\n      'Associate Professor': 'Associate Professor'\n      'Assistant Professor': 'Assistant Professor'\n      Professor: Professor\n      'Language Teacher': 'Language Teacher'\n      'Teacher Trainee': 'Teacher Trainee'\n    '#required': true\nhome_address_fieldset:\n  '#type': fieldset\n  '#title': 'Home address'\n  '#required': true\n  home_address:\n    '#type': webform_address\n    '#title': 'Home address'\n    '#address__title': Street\n    '#address_2__access': false\n    '#state_province__access': false\n    '#required': true\n  email:\n    '#type': email\n    '#title': Email\n    '#required': true\n  telephone_mobile_:\n    '#type': tel\n    '#title': 'Telephone (mobile)'\n    '#required': true\n    '#international': true\n    '#international_initial_country': auto\nworking_language_s_:\n  '#type': webform_checkboxes_other\n  '#title': 'Working language(s)'\n  '#options':\n    Dutch: Dutch\n    English: English\n    Estonian: Estonian\n    French: French\n    German: German\n    Spanish: Spanish\n    Turkish: Turkish\n  '#required': true\ngender_identification:\n  '#type': select\n  '#title': 'Gender identification'\n  '#options':\n    female: female\n    male: male\n    'third gender': 'third gender'\n    none: none\n    'do not wish to say': 'do not wish to say'\n  '#required': true\ntitle_of_current_planned_reasearch_project_working_title_if_appl:\n  '#type': textfield\n  '#title': 'Title of current / planned reasearch project (working title if applicable)'\n  '#required': true\nresearch_field_of_the_current_planned_research_topic_main_:\n  '#type': webform_checkboxes_other\n  '#title': 'Research field of the current / planned research topic (main)'\n  '#options':\n    'Applied Linguistics': 'Applied Linguistics'\n    Linguistics: Linguistics\n    'Educational studies': 'Educational studies'\n    Sociology: Sociology\n    Politics: Politics\n    'Media studies': 'Media studies'\n  '#required': true\nresearch_topic_current_or_completed_:\n  '#type': webform_checkboxes_other\n  '#title': 'Research topic (current or completed)'\n  '#options':\n    'Language teaching and learning methodology': 'Language teaching and learning methodology'\n    'Language teaching pedagogy': 'Language teaching pedagogy'\n    'Sociology and politics of language education, teaching and learning': 'Sociology and politics of language education, teaching and learning'\n    'Curriculum research': 'Curriculum research'\n    'Classroom reasearch': 'Classroom reasearch'\n    'Teacher education / professional development': 'Teacher education / professional development'\n  '#required': true\nresearch_strategy:\n  '#type': webform_checkboxes_other\n  '#title': 'Research strategy'\n  '#options':\n    'Hypothesis-driven (exclusively or mainly quantitative and/or qualitative)': 'Hypothesis-driven (exclusively or mainly quantitative and/or qualitative)'\n    'Reconstructive (exclusively or mainly data-driven)': 'Reconstructive (exclusively or mainly data-driven)'\n    'Mixed-methods (balanced research design)': 'Mixed-methods (balanced research design)'\n    'Conceptual / theoretical': 'Conceptual / theoretical'\n    'Historical reconstruction': 'Historical reconstruction'\n  '#required': true\nresearch_aim:\n  '#type': checkboxes\n  '#title': 'Research aim'\n  '#options':\n    'testing hypothesis': 'testing hypothesis'\n    'generating hypothesis': 'generating hypothesis'\n    'theory development': 'theory development'\n    'classroom development': 'classroom development'\n    'teacher professional development': 'teacher professional development'\n  '#required': true\nthe_current_planned_research_project_considers_multilingualism:\n  '#type': webform_checkboxes_other\n  '#title': 'The current / planned research project, considers multilingualism'\n  '#options':\n    'as a feature of the social environment under investigation': 'as a feature of the social environment under investigation'\n    'as a learner characteristic': 'as a learner characteristic'\n    'as a characteristic of the classroom': 'as a characteristic of the classroom'\n    'as an aim for teaching / learning': 'as an aim for teaching / learning'\n    'as a feature addressed (or excluded) by language policies': 'as a feature addressed (or excluded) by language policies'\ndo_you_supervise_phd_work_yourself_:\n  '#type': select\n  '#title': 'Do you supervise PhD work yourself?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\ndietary_requests:\n  '#type': webform_radios_other\n  '#title': 'Dietary requests'\n  '#options':\n    none: none\n    vegeterian: vegeterian\n    vegan: vegan\n  '#other__option_label': 'allergies:'\n  '#other__placeholder': 'Enter allergies…'\n  '#required': true\ncomment_messages_to_organisers:\n  '#type': textarea\n  '#title': 'Comment / messages to organisers'"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }

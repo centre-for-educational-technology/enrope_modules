@@ -19,3 +19,13 @@ enrope_menu.add_group:
   requirements:
     _permission: 'access content'
     _role: 'moderator+administrator'
+enrope_menu.add_page:
+  path: '/node/add'
+  defaults:
+    _title: 'Add content'
+    _controller: '\Drupal\node\Controller\NodeController::addPage'
+  options:
+    _node_operation_route: TRUE
+  requirements:
+    _node_add_access: 'node'
+    _role: 'administrator'
