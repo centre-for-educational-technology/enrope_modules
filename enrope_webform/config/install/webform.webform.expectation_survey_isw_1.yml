@@ -1,0 +1,220 @@
+uuid: 67af8e94-a117-4c7f-ba37-d5b7cd6a1750
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: expectation_survey_isw_1
+title: 'Expectation Survey ISW 1'
+description: ''
+category: ''
+elements: |
+  markup:
+    '#type': webform_markup
+    '#markup': "<p>Dear participant,</p>\r\n\r\n<p>First of all, welcome to this survey! With this short questionnaire we would like to gather your expectations towards the first ENROPE Intensive Study Week. The data will be used to adapt the event to your wishes and needs. So, please feel free to let us know how to achieve the best outcome of the Intensive Study Week for you.</p>"
+  i_am_interested_in_:
+    '#type': webform_likert
+    '#title': 'I am interested in...'
+    '#questions':
+      'Research methods': 'Research methods'
+      'Data collection instruments': 'Data collection instruments'
+      'Data analysis': 'Data analysis'
+      'Academic writing': 'Academic writing'
+      'Organisation of a thesis': 'Organisation of a thesis'
+      'Research ethics': 'Research ethics'
+      Networking: Networking
+      Publishing: Publishing
+      'Professional reflection': 'Professional reflection'
+    '#answers':
+      1: '1 -- highly interested'
+      2: '2'
+      3: '3'
+      4: '4'
+      5: '5 -- not interested'
+  i_am_interested_in_the_following_subjects_in_the_field_of_pluri_:
+    '#type': webform_likert
+    '#title': 'I am interested in the following subjects in the field of pluri-/multilingualism and education...'
+    '#questions':
+      Agency: Agency
+      Autonomy: Autonomy
+      Collaboration: Collaboration
+      'Critical discourse': 'Critical discourse'
+      Culture: Culture
+      Diversity: Diversity
+      Identity: Identity
+      'Language(s) / at home / in school /own / immersion': 'Language(s) / at home / in school /own / immersion'
+      'Education / teaching / classroom practices': 'Education / teaching / classroom practices'
+      'Educational culture(s)': 'Educational culture(s)'
+      'Language attitudes': 'Language attitudes'
+      Translanguaging: Translanguaging
+      'Social representations of language': 'Social representations of language'
+    '#answers':
+      1: '1 -- highly interested'
+      2: '2'
+      3: '3'
+      4: '4'
+      5: '5 -- not interested'
+  what_do_you_hope_to_take_away_from_the_intensive_study_week_:
+    '#type': textarea
+    '#title': 'What do you hope to take away from the Intensive Study Week?'
+  make_a_statement_about_yourself_as_an_individual_and_as_a_resear:
+    '#type': textarea
+    '#title': 'Make a statement about yourself as an individual and as a researcher. Which skills, abilities, strengthss, character features, specific research perspectives etc. will you bring to the Intensive Study Week?'
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
