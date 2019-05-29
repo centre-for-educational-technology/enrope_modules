@@ -1,0 +1,21 @@
+uuid: db306c99-bab1-4fae-85e8-3c1eb3567001
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_the_language_in_which_the_
+    - node.type.annotated_bibliography
+  module:
+    - options
+id: node.annotated_bibliography.field_the_language_in_which_the_
+field_name: field_the_language_in_which_the_
+entity_type: node
+bundle: annotated_bibliography
+label: 'The language in which the publication has been written'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

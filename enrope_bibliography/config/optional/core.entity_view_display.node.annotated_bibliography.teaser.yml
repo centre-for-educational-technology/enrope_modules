@@ -1,0 +1,31 @@
+uuid: 42bd528c-bb16-46df-87f2-d46920f7971b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.annotated_bibliography.body
+    - node.type.annotated_bibliography
+  module:
+    - text
+    - user
+id: node.annotated_bibliography.teaser
+targetEntityType: node
+bundle: annotated_bibliography
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  private_message_link: true

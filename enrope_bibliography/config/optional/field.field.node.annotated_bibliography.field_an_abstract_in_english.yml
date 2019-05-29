@@ -1,0 +1,19 @@
+uuid: 25ac1e17-24ef-4e41-b635-1a402147f698
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_an_abstract_in_english
+    - node.type.annotated_bibliography
+id: node.annotated_bibliography.field_an_abstract_in_english
+field_name: field_an_abstract_in_english
+entity_type: node
+bundle: annotated_bibliography
+label: 'An abstract in English'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,130 @@
+uuid: 403eaf39-ee0b-4c31-b710-beb24f022ab0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.annotated_bibliography.body
+    - field.field.node.annotated_bibliography.field_an_abstract_in_english
+    - field.field.node.annotated_bibliography.field_an_abstract_in_the_origina
+    - field.field.node.annotated_bibliography.field_annotation_in_english
+    - field.field.node.annotated_bibliography.field_author_name_s_initial_s_
+    - field.field.node.annotated_bibliography.field_issue
+    - field.field.node.annotated_bibliography.field_journal_volume
+    - field.field.node.annotated_bibliography.field_link_to_paper_or_doi
+    - field.field.node.annotated_bibliography.field_pages
+    - field.field.node.annotated_bibliography.field_privacy_settings
+    - field.field.node.annotated_bibliography.field_the_language_in_which_the_
+    - field.field.node.annotated_bibliography.field_title_in_the_original_lang
+    - field.field.node.annotated_bibliography.field_type
+    - field.field.node.annotated_bibliography.field_year
+    - node.type.annotated_bibliography
+  module:
+    - link
+    - options
+    - user
+id: node.annotated_bibliography.default
+targetEntityType: node
+bundle: annotated_bibliography
+mode: default
+content:
+  field_an_abstract_in_english:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_an_abstract_in_the_origina:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_annotation_in_english:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_author_name_s_initial_s_:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_issue:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_journal_volume:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_link_to_paper_or_doi:
+    weight: 6
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_pages:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_the_language_in_which_the_:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title_in_the_original_lang:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_type:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_year:
+    weight: 5
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  body: true
+  field_privacy_settings: true
+  links: true
+  private_message_link: true

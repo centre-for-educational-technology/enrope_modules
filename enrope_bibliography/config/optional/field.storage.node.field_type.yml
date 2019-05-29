@@ -1,0 +1,27 @@
+uuid: 9a51e714-b14b-4221-874e-3321c72f6107
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type
+field_name: field_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: peer_reviewed
+      label: 'Peer-reviewed journal'
+    -
+      value: practitioner_magazine
+      label: 'Practitioner magazine'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

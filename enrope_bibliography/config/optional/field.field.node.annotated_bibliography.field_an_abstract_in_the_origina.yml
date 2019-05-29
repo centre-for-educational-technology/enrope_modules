@@ -1,0 +1,19 @@
+uuid: 46a3d83f-e066-4868-b2b2-3d367656bc8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_an_abstract_in_the_origina
+    - node.type.annotated_bibliography
+id: node.annotated_bibliography.field_an_abstract_in_the_origina
+field_name: field_an_abstract_in_the_origina
+entity_type: node
+bundle: annotated_bibliography
+label: 'An abstract in the original language'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

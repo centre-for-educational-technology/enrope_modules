@@ -1,0 +1,19 @@
+uuid: fe0b5973-590c-4643-b776-3bcd11cf7234
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_in_the_original_lang
+    - node.type.annotated_bibliography
+id: node.annotated_bibliography.field_title_in_the_original_lang
+field_name: field_title_in_the_original_lang
+entity_type: node
+bundle: annotated_bibliography
+label: 'Title in the original language'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

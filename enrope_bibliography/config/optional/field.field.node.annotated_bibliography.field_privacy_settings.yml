@@ -1,0 +1,23 @@
+uuid: 6816f026-d92e-4705-9d95-e7b42cbb090f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_privacy_settings
+    - node.type.annotated_bibliography
+id: node.annotated_bibliography.field_privacy_settings
+field_name: field_privacy_settings
+entity_type: node
+bundle: annotated_bibliography
+label: 'Privacy setting'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Public
+  off_label: Private
+field_type: boolean

@@ -43,3 +43,8 @@ enrope_menu.add_group:
   weight: 108
   menu_name: main
   route_name: enrope_menu.add_group
+enrope_menu.all_annotated_bib:
+  title: 'Annotated Bibliography'
+  weight: 106
+  menu_name: main
+  route_name: enrope_menu.all_annotated_bib

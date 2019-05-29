@@ -1,0 +1,19 @@
+uuid: 0a0097ca-dc71-4f16-9acc-eedd3b0514ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_an_abstract_in_english
+field_name: field_an_abstract_in_english
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

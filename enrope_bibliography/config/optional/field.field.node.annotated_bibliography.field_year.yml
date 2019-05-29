@@ -1,0 +1,23 @@
+uuid: cb0fa11a-ca49-459a-a22a-ac984f693a33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.annotated_bibliography
+id: node.annotated_bibliography.field_year
+field_name: field_year
+entity_type: node
+bundle: annotated_bibliography
+label: Year
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -29,3 +29,7 @@ enrope_menu.add_page:
   requirements:
     _node_add_access: 'node'
     _role: 'administrator'
+enrope_menu.all_annotated_bib:
+  path: '/annotated-bibliography'
+  requirements:
+    _permission: 'access content'

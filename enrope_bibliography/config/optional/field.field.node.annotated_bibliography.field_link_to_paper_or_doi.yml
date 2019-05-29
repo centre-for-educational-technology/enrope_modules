@@ -1,0 +1,23 @@
+uuid: 08ef70f2-164f-41d8-bf38-e4045a57a5ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_paper_or_doi
+    - node.type.annotated_bibliography
+  module:
+    - link
+id: node.annotated_bibliography.field_link_to_paper_or_doi
+field_name: field_link_to_paper_or_doi
+entity_type: node
+bundle: annotated_bibliography
+label: 'Link to paper or DOI'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

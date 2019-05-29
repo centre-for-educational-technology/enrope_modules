@@ -1,0 +1,23 @@
+uuid: 6a519e4d-5aa9-453f-99ed-bd19aa40975e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.annotated_bibliography
+  module:
+    - options
+id: node.annotated_bibliography.field_type
+field_name: field_type
+entity_type: node
+bundle: annotated_bibliography
+label: Type
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: peer_reviewed
+default_value_callback: ''
+settings: {  }
+field_type: list_string

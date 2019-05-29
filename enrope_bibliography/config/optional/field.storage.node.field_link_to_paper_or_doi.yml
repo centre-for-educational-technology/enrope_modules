@@ -1,0 +1,19 @@
+uuid: 1bf57682-be1a-495d-a6f1-4f2d41719f61
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_link_to_paper_or_doi
+field_name: field_link_to_paper_or_doi
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
