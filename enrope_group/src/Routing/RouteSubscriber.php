@@ -20,11 +20,11 @@ class RouteSubscriber extends RouteSubscriberBase {
       $route->setRequirement('_access', 'FALSE');
     }
 
-    //Disable Relate existing node button on group nodes page
-    //Using Group operations block instead
-//    if($route = $collection->get('entity.group_content.group_node_add_page')){
-//      $route->setRequirement('_access', 'FALSE');
-//    }
+
+    //Disable add new member button from Members listing
+    if($route = $collection->get('entity.group_content.add_form')){
+      $route->setRequirement('_access', 'FALSE');
+    }
 
 
 

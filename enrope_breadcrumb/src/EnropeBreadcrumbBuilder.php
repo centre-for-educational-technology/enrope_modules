@@ -67,12 +67,14 @@ class EnropeBreadcrumbBuilder implements BreadcrumbBuilderInterface
       return ['name' => "Articles", 'route' => "view.group_articles_.page_1"];
     } elseif ($content_type == 'file') {
       return ["name" => "Files", 'route' => "view.files.page_1"];
-    } elseif ($content_type =='group_page') {
+    } elseif ($content_type == 'group_page') {
       return ["name" => 'Pages', 'route' => "view.group_pages.page_1"];
     } elseif ($content_type == 'resources') {
       return ["name" => 'Resources', 'route' => "view.resources.page_1"];
     } elseif ($content_type == 'discussion_board') {
       return ['name' => 'Discussions', 'route' => "view.discussion_board.page_1"];
+    } elseif ($content_type == 'group_task') {
+      return ['name' => 'Tasks', 'route' => "view.group_tasks.page_1"];
     } else {
       return null;
     }
