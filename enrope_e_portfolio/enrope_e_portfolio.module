@@ -4,9 +4,9 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 
 
-function enrope_e_portfolio_node_access(NodeInterface $node, $op, AccountInterface $account) {
-  if ($account->isAnonymous() && ($node->gettype() == 'e_portfolio' || $node->gettype() == 'portfolio_competency')) {
-    return AccessResult::forbidden()->cachePerPermissions();
-  }
-  return AccessResult::neutral()->cachePerPermissions();
-}
+//function enrope_e_portfolio_node_access(NodeInterface $node, $op, AccountInterface $account) {
+//  if ($account->isAnonymous() && ($node->gettype() == 'e_portfolio' || $node->gettype() == 'portfolio_competency')) {
+//    return AccessResult::forbidden()->cachePerPermissions();
+//  }
+//  return AccessResult::neutral()->cachePerPermissions();
+//}

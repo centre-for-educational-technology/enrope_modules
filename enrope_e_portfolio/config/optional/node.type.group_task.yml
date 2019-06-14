@@ -1,0 +1,17 @@
+uuid: 3a2b0854-8d6f-486b-b414-00b5b0697af9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Group task'
+type: group_task
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true
