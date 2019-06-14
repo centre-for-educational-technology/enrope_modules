@@ -1,0 +1,19 @@
+uuid: 728e62dd-555a-41c1-bfe2-9ea68e1d8780
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_introductory_info_on_the_t
+field_name: field_introductory_info_on_the_t
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

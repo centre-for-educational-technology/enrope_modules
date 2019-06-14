@@ -74,7 +74,7 @@ class EnropeBreadcrumbBuilder implements BreadcrumbBuilderInterface
     } elseif ($content_type == 'discussion_board') {
       return ['name' => 'Discussions', 'route' => "view.discussion_board.page_1"];
     } elseif ($content_type == 'group_task') {
-      return ['name' => 'Tasks', 'route' => "view.group_tasks.page_1"];
+      return ['name' => 'Tasks', 'route' => "view.group_ta.page_1"];
     } else {
       return null;
     }

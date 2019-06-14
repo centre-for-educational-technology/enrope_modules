@@ -1,0 +1,26 @@
+uuid: 5521a9a2-e0f5-48c6-94de-3743d28f53dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - enrope_e_portfolio
+    - system
+  theme:
+    - enrope
+id: addeportfolioblock
+theme: enrope
+region: content
+weight: -4
+provider: null
+plugin: add_e_portfolio_block
+settings:
+  id: add_e_portfolio_block
+  label: 'Add e-Portfolio block'
+  provider: enrope_e_portfolio
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /my-e-portfolio
+    negate: false
+    context_mapping: {  }

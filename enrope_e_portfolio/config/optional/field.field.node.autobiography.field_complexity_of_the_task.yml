@@ -1,0 +1,21 @@
+uuid: b9957d87-e040-4bb0-b56e-a2f135e5648e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_complexity_of_the_task
+    - node.type.autobiography
+  module:
+    - options
+id: node.autobiography.field_complexity_of_the_task
+field_name: field_complexity_of_the_task
+entity_type: node
+bundle: autobiography
+label: 'Complexity of the task'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

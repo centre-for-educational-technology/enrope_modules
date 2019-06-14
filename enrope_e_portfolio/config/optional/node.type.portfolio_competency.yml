@@ -1,0 +1,17 @@
+uuid: 2dd81cf3-3a9c-4299-b1f8-9fc5d8eedeca
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Portfolio competency'
+type: portfolio_competency
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

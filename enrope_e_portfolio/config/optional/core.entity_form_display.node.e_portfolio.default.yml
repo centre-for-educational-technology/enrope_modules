@@ -1,0 +1,86 @@
+uuid: 563d1ef9-b8c7-4164-8f12-3dcd6a0787cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.e_portfolio.body
+    - field.field.node.e_portfolio.field_autobiography
+    - field.field.node.e_portfolio.field_competences
+    - field.field.node.e_portfolio.field_image
+    - field.field.node.e_portfolio.field_privacy_settings
+    - field.field.node.e_portfolio.field_showcase
+    - image.style.thumbnail
+    - node.type.e_portfolio
+  module:
+    - image
+    - text
+id: node.e_portfolio.default
+targetEntityType: node
+bundle: e_portfolio
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_autobiography:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_competences:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_privacy_settings:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_showcase:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

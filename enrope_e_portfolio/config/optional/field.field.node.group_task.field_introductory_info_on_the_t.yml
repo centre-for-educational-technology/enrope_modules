@@ -1,0 +1,19 @@
+uuid: 670fe20e-eb4d-485c-aad9-a8e7843b5bb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introductory_info_on_the_t
+    - node.type.group_task
+id: node.group_task.field_introductory_info_on_the_t
+field_name: field_introductory_info_on_the_t
+entity_type: node
+bundle: group_task
+label: 'Introductory Info on the Task'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

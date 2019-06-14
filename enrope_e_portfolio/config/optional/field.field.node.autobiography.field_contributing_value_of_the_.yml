@@ -1,0 +1,21 @@
+uuid: 220b03b0-d064-460c-896f-b269eef89ef3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contributing_value_of_the_
+    - node.type.autobiography
+  module:
+    - options
+id: node.autobiography.field_contributing_value_of_the_
+field_name: field_contributing_value_of_the_
+entity_type: node
+bundle: autobiography
+label: 'Contributing value of the task to professional development'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

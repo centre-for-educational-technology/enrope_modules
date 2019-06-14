@@ -1,0 +1,25 @@
+uuid: 0b62cba2-8053-447c-b452-ed8fcb6bd946
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competences
+    - node.type.e_portfolio
+id: node.e_portfolio.field_competences
+field_name: field_competences
+entity_type: node
+bundle: e_portfolio
+label: Competences
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: my_published_competencies
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

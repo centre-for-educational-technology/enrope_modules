@@ -1,0 +1,27 @@
+uuid: f6cbf3b6-1c4d-480b-aed5-bde67457a652
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.portfolio_competency
+  module:
+    - file
+id: node.portfolio_competency.field_file
+field_name: field_file
+entity_type: node
+bundle: portfolio_competency
+label: Files
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png pdf jpg doc docx jpeg gif'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

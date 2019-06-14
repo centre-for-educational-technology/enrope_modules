@@ -1,0 +1,23 @@
+uuid: cdd27c55-0485-401a-94d4-dd0e220e4589
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_privacy_settings
+    - node.type.portfolio_showcase
+id: node.portfolio_showcase.field_privacy_settings
+field_name: field_privacy_settings
+entity_type: node
+bundle: portfolio_showcase
+label: 'Privacy setting'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Public
+  off_label: Private
+field_type: boolean

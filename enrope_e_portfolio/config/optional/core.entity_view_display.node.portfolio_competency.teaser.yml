@@ -1,0 +1,31 @@
+uuid: 35b27e22-627b-4516-a6db-4ad466e299f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.portfolio_competency.body
+    - node.type.portfolio_competency
+  module:
+    - text
+    - user
+id: node.portfolio_competency.teaser
+targetEntityType: node
+bundle: portfolio_competency
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  private_message_link: true

@@ -1,0 +1,27 @@
+uuid: df1d277e-453b-4cd2-afeb-0c4b876fae94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.portfolio_showcase
+  module:
+    - file
+id: node.portfolio_showcase.field_file
+field_name: field_file
+entity_type: node
+bundle: portfolio_showcase
+label: Files
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png pdf jpg doc docx jpeg gif'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

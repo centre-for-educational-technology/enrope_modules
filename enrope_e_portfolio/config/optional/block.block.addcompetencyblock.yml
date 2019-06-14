@@ -1,0 +1,26 @@
+uuid: 1cdf78ee-6ffd-45c3-98a4-acbcd64faea8
+langcode: en
+status: true
+dependencies:
+  module:
+    - enrope_e_portfolio
+    - system
+  theme:
+    - enrope
+id: addcompetencyblock
+theme: enrope
+region: content
+weight: -3
+provider: null
+plugin: add_competency_block
+settings:
+  id: add_competency_block
+  label: 'Add competency block'
+  provider: enrope_e_portfolio
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /my-competencies
+    negate: false
+    context_mapping: {  }

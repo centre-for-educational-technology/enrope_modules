@@ -1,0 +1,21 @@
+uuid: ccae7588-2dcd-438b-8d85-9deea8249b8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portfolio_section
+    - node.type.group_task
+  module:
+    - options
+id: node.group_task.field_portfolio_section
+field_name: field_portfolio_section
+entity_type: node
+bundle: group_task
+label: 'Portfolio section'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

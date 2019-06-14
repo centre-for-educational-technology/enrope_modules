@@ -1,0 +1,5 @@
+services:
+  enrope_e_portfolio.route_subscriber:
+    class: Drupal\enrope_e_portfolio\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

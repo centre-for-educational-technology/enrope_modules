@@ -90,7 +90,7 @@ class GroupContentOperationsBlock extends BlockBase {
     elseif (strstr($route_name, 'discussion_board')){
       return "group_node:discussion_board";
     }
-    elseif (strstr($route_name, 'group_task')){
+    elseif (strstr($route_name, 'group_ta')){
       return "group_node:group_task";
     }
 

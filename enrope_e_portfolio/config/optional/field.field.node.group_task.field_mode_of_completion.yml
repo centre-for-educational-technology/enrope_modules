@@ -1,0 +1,21 @@
+uuid: fd17235e-0b33-474e-a915-5fcea17c8a25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mode_of_completion
+    - node.type.group_task
+  module:
+    - options
+id: node.group_task.field_mode_of_completion
+field_name: field_mode_of_completion
+entity_type: node
+bundle: group_task
+label: 'Mode of Completion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

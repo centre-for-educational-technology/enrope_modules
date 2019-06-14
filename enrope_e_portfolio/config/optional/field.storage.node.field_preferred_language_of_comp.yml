@@ -1,0 +1,45 @@
+uuid: 1985247d-a2ab-4f05-9189-a89b7a8a8602
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_preferred_language_of_comp
+field_name: field_preferred_language_of_comp
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: de
+      label: German
+    -
+      value: es
+      label: Spanish
+    -
+      value: ca
+      label: Catalan
+    -
+      value: gb
+      label: English
+    -
+      value: tr
+      label: Turkish
+    -
+      value: nl
+      label: Dutch
+    -
+      value: fr
+      label: French
+    -
+      value: ee
+      label: Estonian
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

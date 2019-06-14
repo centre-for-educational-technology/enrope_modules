@@ -1,0 +1,19 @@
+uuid: 03fee650-0af2-48a3-872c-2fd16c114f2e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_target_area_of_competence
+field_name: field_target_area_of_competence
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

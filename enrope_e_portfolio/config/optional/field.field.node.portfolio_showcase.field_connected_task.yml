@@ -1,0 +1,25 @@
+uuid: fbd82958-d4ec-4349-881e-67b6e1b1c610
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_connected_task
+    - node.type.portfolio_showcase
+id: node.portfolio_showcase.field_connected_task
+field_name: field_connected_task
+entity_type: node
+bundle: portfolio_showcase
+label: 'Connected task'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: showcase_tasks
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

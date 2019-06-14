@@ -1,0 +1,85 @@
+uuid: 6a9b8589-a11d-40a0-a961-fc67ec88a3bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.group_task.field_ict_requirements
+    - field.field.node.group_task.field_input_task_instructions
+    - field.field.node.group_task.field_introductory_info_on_the_t
+    - field.field.node.group_task.field_mode_of_completion
+    - field.field.node.group_task.field_portfolio_section
+    - field.field.node.group_task.field_preferred_language_of_comp
+    - field.field.node.group_task.field_target_area_of_competence
+    - node.type.group_task
+  module:
+    - text
+id: node.group_task.default
+targetEntityType: node
+bundle: group_task
+mode: default
+content:
+  field_ict_requirements:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_input_task_instructions:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_introductory_info_on_the_t:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_mode_of_completion:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_portfolio_section:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_preferred_language_of_comp:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_target_area_of_competence:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

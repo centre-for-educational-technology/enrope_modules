@@ -1,0 +1,26 @@
+uuid: 3391c3de-a495-4d12-b165-bd32c4044aa6
+langcode: en
+status: true
+dependencies:
+  module:
+    - enrope_e_portfolio
+    - system
+  theme:
+    - enrope
+id: addautobiographyblock
+theme: enrope
+region: content
+weight: -2
+provider: null
+plugin: add_autobiography_block
+settings:
+  id: add_autobiography_block
+  label: 'Add autobiography block'
+  provider: enrope_e_portfolio
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /my-autobiography
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,27 @@
+uuid: af6cfb95-5eaa-4d19-915b-d6119faa4b6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_autobiography_type
+field_name: field_autobiography_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Researcher diary'
+      label: 'Researcher diary'
+    -
+      value: 'Answer to task'
+      label: 'Answer to task'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

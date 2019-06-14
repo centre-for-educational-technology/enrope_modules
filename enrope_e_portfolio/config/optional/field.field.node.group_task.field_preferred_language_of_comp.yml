@@ -1,0 +1,21 @@
+uuid: 7f9a4ced-839f-44fe-8523-02206b5536b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_preferred_language_of_comp
+    - node.type.group_task
+  module:
+    - options
+id: node.group_task.field_preferred_language_of_comp
+field_name: field_preferred_language_of_comp
+entity_type: node
+bundle: group_task
+label: 'Preferred Language of Completion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 457a1abb-006a-4b2e-b09a-ea8bb11b1816
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_privacy_settings
+    - node.type.e_portfolio
+id: node.e_portfolio.field_privacy_settings
+field_name: field_privacy_settings
+entity_type: node
+bundle: e_portfolio
+label: 'Privacy setting'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Public
+  off_label: Private
+field_type: boolean

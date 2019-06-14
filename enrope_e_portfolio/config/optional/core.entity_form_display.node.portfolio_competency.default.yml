@@ -1,0 +1,87 @@
+uuid: 1e5359af-f165-406c-9098-350f7a14b1b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.portfolio_competency.body
+    - field.field.node.portfolio_competency.comment
+    - field.field.node.portfolio_competency.field_competency_type
+    - field.field.node.portfolio_competency.field_connected_task
+    - field.field.node.portfolio_competency.field_file
+    - field.field.node.portfolio_competency.field_privacy_settings
+    - field.field.node.portfolio_competency.field_request_peer_expert_feedba
+    - node.type.portfolio_competency
+  module:
+    - comment
+    - file
+    - text
+id: node.portfolio_competency.default
+targetEntityType: node
+bundle: portfolio_competency
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  comment:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_competency_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_connected_task:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_file:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_privacy_settings:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_request_peer_expert_feedba:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

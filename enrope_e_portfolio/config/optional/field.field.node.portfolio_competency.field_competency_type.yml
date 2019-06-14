@@ -1,0 +1,21 @@
+uuid: 0da68f88-2328-4a69-8b42-107c1d424b02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competency_type
+    - node.type.portfolio_competency
+  module:
+    - options
+id: node.portfolio_competency.field_competency_type
+field_name: field_competency_type
+entity_type: node
+bundle: portfolio_competency
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

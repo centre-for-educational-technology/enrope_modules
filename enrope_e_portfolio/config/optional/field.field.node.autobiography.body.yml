@@ -1,0 +1,22 @@
+uuid: e5456d84-70b6-4de8-b099-2650f7ee4d4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.autobiography
+  module:
+    - text
+id: node.autobiography.body
+field_name: body
+entity_type: node
+bundle: autobiography
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

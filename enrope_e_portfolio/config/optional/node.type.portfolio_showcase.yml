@@ -1,0 +1,17 @@
+uuid: 23bc22b7-252b-491c-82fd-b6cbf98f7358
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Portfolio showcase'
+type: portfolio_showcase
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

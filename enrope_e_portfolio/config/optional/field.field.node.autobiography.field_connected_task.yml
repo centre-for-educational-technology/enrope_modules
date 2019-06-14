@@ -1,0 +1,25 @@
+uuid: 5c1a18a4-1d8b-4ccd-b146-984ba16dbfc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_connected_task
+    - node.type.autobiography
+id: node.autobiography.field_connected_task
+field_name: field_connected_task
+entity_type: node
+bundle: autobiography
+label: 'Connected task'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: autobiography_tasks
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,26 @@
+uuid: db469339-0622-4e77-939f-0c3ce6e45849
+langcode: en
+status: true
+dependencies:
+  module:
+    - enrope_e_portfolio
+    - system
+  theme:
+    - enrope
+id: addshowcaseblock
+theme: enrope
+region: content
+weight: -1
+provider: null
+plugin: add_showcase_block
+settings:
+  id: add_showcase_block
+  label: 'Add showcase block'
+  provider: enrope_e_portfolio
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /my-showcases
+    negate: false
+    context_mapping: {  }

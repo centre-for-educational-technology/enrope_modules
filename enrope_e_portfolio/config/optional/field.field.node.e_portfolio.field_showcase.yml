@@ -1,0 +1,25 @@
+uuid: 6afa45de-73c0-4cdb-a962-4c907f27f6b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_showcase
+    - node.type.e_portfolio
+id: node.e_portfolio.field_showcase
+field_name: field_showcase
+entity_type: node
+bundle: e_portfolio
+label: Showcase
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: my_published_showcases
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

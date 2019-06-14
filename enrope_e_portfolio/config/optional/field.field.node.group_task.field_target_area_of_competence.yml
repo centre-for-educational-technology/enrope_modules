@@ -1,0 +1,19 @@
+uuid: 59ea547c-05a0-4f56-9fe8-1cc9a0f11cea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_area_of_competence
+    - node.type.group_task
+id: node.group_task.field_target_area_of_competence
+field_name: field_target_area_of_competence
+entity_type: node
+bundle: group_task
+label: 'Target Area of Competence'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

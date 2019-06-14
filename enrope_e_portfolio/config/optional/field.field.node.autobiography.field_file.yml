@@ -1,0 +1,27 @@
+uuid: 1bd0b5a9-bb7a-4d3c-954b-4a8ecd3297ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.autobiography
+  module:
+    - file
+id: node.autobiography.field_file
+field_name: field_file
+entity_type: node
+bundle: autobiography
+label: Files
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png pdf jpg doc docx jpeg gif'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

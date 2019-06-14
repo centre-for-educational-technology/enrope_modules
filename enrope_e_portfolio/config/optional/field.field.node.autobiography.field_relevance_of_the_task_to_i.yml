@@ -1,0 +1,21 @@
+uuid: 653ea49d-a2bb-473d-acba-0a6c0e22bb38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relevance_of_the_task_to_i
+    - node.type.autobiography
+  module:
+    - options
+id: node.autobiography.field_relevance_of_the_task_to_i
+field_name: field_relevance_of_the_task_to_i
+entity_type: node
+bundle: autobiography
+label: 'Relevance of the task to interest of research and/or teaching practice'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

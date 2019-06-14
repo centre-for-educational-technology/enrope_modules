@@ -1,0 +1,23 @@
+uuid: 64b0b1ee-1946-497f-9d5a-cf7b20278bca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_peer_expert_feedba
+    - node.type.portfolio_competency
+id: node.portfolio_competency.field_request_peer_expert_feedba
+field_name: field_request_peer_expert_feedba
+entity_type: node
+bundle: portfolio_competency
+label: 'Allow peer/expert feedback'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

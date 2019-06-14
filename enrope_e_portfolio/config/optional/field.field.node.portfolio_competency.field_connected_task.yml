@@ -1,0 +1,25 @@
+uuid: 44a6059f-bfa2-407e-b4bc-6cb1d0a8e3c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_connected_task
+    - node.type.portfolio_competency
+id: node.portfolio_competency.field_connected_task
+field_name: field_connected_task
+entity_type: node
+bundle: portfolio_competency
+label: 'Connected task'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: competencies_tasks
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

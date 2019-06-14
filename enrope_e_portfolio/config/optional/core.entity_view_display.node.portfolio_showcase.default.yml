@@ -1,0 +1,91 @@
+uuid: c20ed7f3-d973-4b21-be7f-2492b301f8fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.portfolio_showcase.body
+    - field.field.node.portfolio_showcase.comment
+    - field.field.node.portfolio_showcase.field_connected_task
+    - field.field.node.portfolio_showcase.field_file
+    - field.field.node.portfolio_showcase.field_privacy_settings
+    - field.field.node.portfolio_showcase.field_request_peer_expert_feedba
+    - field.field.node.portfolio_showcase.field_showcase_type
+    - node.type.portfolio_showcase
+  module:
+    - comment
+    - file
+    - options
+    - text
+    - user
+id: node.portfolio_showcase.default
+targetEntityType: node
+bundle: portfolio_showcase
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment:
+    weight: 107
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_connected_task:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_file:
+    weight: 104
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_privacy_settings:
+    weight: 106
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_request_peer_expert_feedba:
+    weight: 105
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_showcase_type:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  private_message_link: true

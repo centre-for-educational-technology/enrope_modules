@@ -1,0 +1,21 @@
+uuid: 6f65572c-c289-493c-a245-37ad4d99c895
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_showcase_type
+    - node.type.portfolio_showcase
+  module:
+    - options
+id: node.portfolio_showcase.field_showcase_type
+field_name: field_showcase_type
+entity_type: node
+bundle: portfolio_showcase
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
