@@ -48,3 +48,8 @@ enrope_menu.all_annotated_bib:
   weight: 106
   menu_name: main
   route_name: enrope_menu.all_annotated_bib
+enrope_menu.all_portfolios:
+  title: 'All e-Portfolios'
+  weight: 106
+  menu_name: main
+  route_name: enrope_menu.all_portfolios

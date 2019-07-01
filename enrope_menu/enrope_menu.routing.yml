@@ -33,3 +33,7 @@ enrope_menu.all_annotated_bib:
   path: '/annotated-bibliography'
   requirements:
     _permission: 'access content'
+enrope_menu.all_portfolios:
+  path: '/all-portfolios'
+  requirements:
+    _user_is_logged_in: 'TRUE'
