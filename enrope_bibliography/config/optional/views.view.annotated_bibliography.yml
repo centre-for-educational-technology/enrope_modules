@@ -3,10 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_an_abstract_in_english
+    - field.storage.node.field_an_abstract_in_the_origina
+    - field.storage.node.field_author_name_s_initial_s_
+    - field.storage.node.field_the_language_in_which_the_
     - field.storage.node.field_title_in_the_original_lang
+    - field.storage.node.field_year
     - node.type.annotated_bibliography
   module:
     - node
+    - options
     - user
 id: annotated_bibliography
 label: 'Annotated bibliography'
@@ -80,7 +86,11 @@ display:
           columns:
             title: title
             field_title_in_the_original_lang: field_title_in_the_original_lang
-            langcode: langcode
+            field_the_language_in_which_the_: field_the_language_in_which_the_
+            field_an_abstract_in_english: field_an_abstract_in_english
+            field_an_abstract_in_the_origina: field_an_abstract_in_the_origina
+            field_year: field_year
+            field_author_name_s_initial_s_: field_author_name_s_initial_s_
           info:
             title:
               sortable: true
@@ -96,7 +106,35 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            langcode:
+            field_the_language_in_which_the_:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_an_abstract_in_english:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_an_abstract_in_the_origina:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_year:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_author_name_s_initial_s_:
               sortable: true
               default_sort_order: asc
               align: ''
@@ -236,14 +274,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        langcode:
-          id: langcode
-          table: node
-          field: langcode
+        field_the_language_in_which_the_:
+          id: field_the_language_in_which_the_
+          table: node__field_the_language_in_which_the_
+          field: field_the_language_in_which_the_
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Original language'
+          label: Language
           exclude: false
           alter:
             alter_text: false
@@ -285,10 +323,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: language
-          settings:
-            link_to_entity: false
-            native_language: false
+          type: list_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -299,8 +335,257 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: langcode
+          plugin_id: field
+        field_an_abstract_in_english:
+          id: field_an_abstract_in_english
+          table: node__field_an_abstract_in_english
+          field: field_an_abstract_in_english
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'An abstract in English'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_an_abstract_in_the_origina:
+          id: field_an_abstract_in_the_origina
+          table: node__field_an_abstract_in_the_origina
+          field: field_an_abstract_in_the_origina
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'An abstract in the original language'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_year:
+          id: field_year
+          table: node__field_year
+          field: field_year
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Year
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_author_name_s_initial_s_:
+          id: field_author_name_s_initial_s_
+          table: node__field_author_name_s_initial_s_
+          field: field_author_name_s_initial_s_
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Authors
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
           plugin_id: field
       filters:
         status:
@@ -323,48 +608,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: word
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: title_op
-            label: 'Search by English title'
-            description: ''
-            use_operator: false
-            operator: title_op
-            identifier: title
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              moderator: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: title
-          plugin_id: string
         field_privacy_settings_value:
           id: field_privacy_settings_value
           table: node__field_privacy_settings
@@ -401,6 +644,51 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
+        combine:
+          id: combine
+          table: views
+          field: combine
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: 'Search title or abstract'
+            description: ''
+            use_operator: false
+            operator: combine_op
+            identifier: combine
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              moderator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            title: title
+            field_title_in_the_original_lang: field_title_in_the_original_lang
+            field_an_abstract_in_english: field_an_abstract_in_english
+            field_an_abstract_in_the_origina: field_an_abstract_in_the_origina
+          plugin_id: combine
       sorts:
         created:
           id: created
@@ -434,7 +722,12 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_an_abstract_in_english'
+        - 'config:field.storage.node.field_an_abstract_in_the_origina'
+        - 'config:field.storage.node.field_author_name_s_initial_s_'
+        - 'config:field.storage.node.field_the_language_in_which_the_'
         - 'config:field.storage.node.field_title_in_the_original_lang'
+        - 'config:field.storage.node.field_year'
   page_1:
     display_plugin: page
     id: page_1
@@ -453,4 +746,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_an_abstract_in_english'
+        - 'config:field.storage.node.field_an_abstract_in_the_origina'
+        - 'config:field.storage.node.field_author_name_s_initial_s_'
+        - 'config:field.storage.node.field_the_language_in_which_the_'
         - 'config:field.storage.node.field_title_in_the_original_lang'
+        - 'config:field.storage.node.field_year'

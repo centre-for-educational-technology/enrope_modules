@@ -1,6 +1,16 @@
 <?php
 
 /**
- * @file
- * This is my module. I will create a view here, and it will be empty.
+ * Implements hook_theme()
  */
+function enrope_news_theme($existing, $type, $theme, $path)
+{
+  return array(
+
+      'enrope_twitter_block_template' => array(
+          'variables' => array(),
+      ),
+
+
+  );
+}
