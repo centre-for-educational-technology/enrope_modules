@@ -1,0 +1,15 @@
+uuid: 1df2e30b-2d54-4150-834e-edbea9210520
+langcode: en
+status: true
+dependencies: {  }
+name: avatar
+label: Avatar
+effects:
+  e0c112ef-cb8c-443b-9610-410c4a5f2b41:
+    uuid: e0c112ef-cb8c-443b-9610-410c4a5f2b41
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: null
+      upscale: false
