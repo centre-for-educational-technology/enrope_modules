@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_privacy_settings
+    - field.storage.node.field_the_language_in_which_the_
     - field.storage.node.field_title_in_the_original_lang
     - node.type.annotated_bibliography
   module:
     - node
+    - options
     - user
 id: annotated_bibliography_by_user
 label: 'Annotated bibliography by user'
@@ -237,14 +239,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        langcode:
-          id: langcode
-          table: node
-          field: langcode
+        field_the_language_in_which_the_:
+          id: field_the_language_in_which_the_
+          table: node__field_the_language_in_which_the_
+          field: field_the_language_in_which_the_
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Original language'
+          label: Language
           exclude: false
           alter:
             alter_text: false
@@ -286,10 +288,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: language
-          settings:
-            link_to_entity: false
-            native_language: false
+          type: list_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -300,8 +300,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: langcode
           plugin_id: field
         field_privacy_settings:
           id: field_privacy_settings
@@ -465,6 +463,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_privacy_settings'
+        - 'config:field.storage.node.field_the_language_in_which_the_'
         - 'config:field.storage.node.field_title_in_the_original_lang'
   page_1:
     display_plugin: page
@@ -494,4 +493,5 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_privacy_settings'
+        - 'config:field.storage.node.field_the_language_in_which_the_'
         - 'config:field.storage.node.field_title_in_the_original_lang'

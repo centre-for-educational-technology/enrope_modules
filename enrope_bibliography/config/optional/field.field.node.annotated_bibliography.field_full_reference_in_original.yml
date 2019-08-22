@@ -1,0 +1,19 @@
+uuid: 1270c7bb-9ce1-4e64-9398-0ba72e979cd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_full_reference_in_original
+    - node.type.annotated_bibliography
+id: node.annotated_bibliography.field_full_reference_in_original
+field_name: field_full_reference_in_original
+entity_type: node
+bundle: annotated_bibliography
+label: 'Full reference in original language'
+description: 'Diverse referencing formats are acceptable'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

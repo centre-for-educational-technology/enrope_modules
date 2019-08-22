@@ -1,0 +1,19 @@
+uuid: b35cb435-aaf6-4687-980b-fdd078b95be8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issn
+    - node.type.annotated_bibliography
+id: node.annotated_bibliography.field_issn
+field_name: field_issn
+entity_type: node
+bundle: annotated_bibliography
+label: ISSN
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

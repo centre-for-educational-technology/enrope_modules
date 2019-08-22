@@ -11,13 +11,13 @@ id: node.annotated_bibliography.field_link_to_paper_or_doi
 field_name: field_link_to_paper_or_doi
 entity_type: node
 bundle: annotated_bibliography
-label: 'Link to paper or DOI'
+label: 'Link to paper'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
+  link_type: 16
   title: 0
 field_type: link
