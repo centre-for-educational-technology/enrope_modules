@@ -6,49 +6,6 @@ use Drupal\Core\Access\AccessResultNeutral;
 use Drupal\Core\Access\AccessResultForbidden;
 
 
-/**
- * Access check for field_privacy_settings
- * Implements hook_node_access().
- */
-function enrope_bibliography_node_access(NodeInterface $node, $op, AccountInterface $account) {
-  $access = new AccessResultNeutral();
-  if ($node->hasField('field_privacy_settings')) {
-    $field = $node->get('field_privacy_settings')->getValue()[0]['value'];
-    if ($field == 0 && $account->id() != $node->getOwnerId()) {
-      $access = new AccessResultForbidden();
-    }
-  }
-  $access->addCacheableDependency($field);
-  $access->addCacheableDependency($node);
-  return $access;
-}
-
-
-
-/**
- * Hide nodes with field_privacy_settings false in taxonomy_term view list
- * Implements hook_preprocess_views_view_list().
- */
-function enrope_bibliography_preprocess_views_view_list(&$variables) {
-  if (isset($variables['view'])) {
-    $view = $variables['view'];
-    if ($view->id() == "taxonomy_term") {
-      $result = $view->result;
-      foreach ($result as $key => $resultRowEntity) {
-        $row_entity = $resultRowEntity->_entity;
-
-        if($row_entity->hasField('field_privacy_settings')){
-          $some_field_on_the_node = $row_entity->get('field_privacy_settings')->getValue()[0]['value'];
-          if ($some_field_on_the_node == 0 ) {
-            unset($variables['rows'][$key]);
-          }
-        }
-
-      }
-    }
-  }
-}
-
 
 /**
  * Implements hook_theme() to add the template definition.

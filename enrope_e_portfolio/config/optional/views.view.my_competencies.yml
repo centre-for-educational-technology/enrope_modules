@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_competency_type
     - field.storage.node.field_connected_task
-    - field.storage.node.field_privacy_settings
     - field.storage.node.field_request_peer_expert_feedba
     - node.type.portfolio_competency
     - system.menu.main
@@ -435,14 +434,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_privacy_settings:
-          id: field_privacy_settings
-          table: node__field_privacy_settings
-          field: field_privacy_settings
+        status:
+          id: status
+          table: node_field_data
+          field: status
           relationship: none
           group_type: group
           admin_label: ''
-          label: Public
+          label: Published
           exclude: false
           alter:
             alter_text: false
@@ -499,19 +498,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
+          plugin_id: field
+      filters:
         type:
           id: type
           table: node_field_data
@@ -629,7 +619,6 @@ display:
       tags:
         - 'config:field.storage.node.field_competency_type'
         - 'config:field.storage.node.field_connected_task'
-        - 'config:field.storage.node.field_privacy_settings'
         - 'config:field.storage.node.field_request_peer_expert_feedba'
   page_1:
     display_plugin: page
@@ -661,5 +650,4 @@ display:
       tags:
         - 'config:field.storage.node.field_competency_type'
         - 'config:field.storage.node.field_connected_task'
-        - 'config:field.storage.node.field_privacy_settings'
         - 'config:field.storage.node.field_request_peer_expert_feedba'
