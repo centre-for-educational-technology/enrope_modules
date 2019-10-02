@@ -1,0 +1,12 @@
+enrope_bibliography.exportRIS:
+  path: 'node/{node}/export/ris'
+  defaults:
+    _controller: '\Drupal\enrope_bibliography\Controller\EnropeExportController::exportRIS'
+  requirements:
+    _permission: 'access content'
+enrope_bibliography.exportBIB:
+  path: 'node/{node}/export/bib'
+  defaults:
+    _controller: '\Drupal\enrope_bibliography\Controller\EnropeExportController::exportBIB'
+  requirements:
+    _permission: 'access content'
