@@ -56,6 +56,7 @@ class EnropeBreadcrumbBuilder implements BreadcrumbBuilderInterface
       $breadcrumb_values = $this->getRouteByContentType($group_content_type);
       $breadcrumb->addLink(Link::createFromRoute($breadcrumb_values['name'], $breadcrumb_values['route'], ['group' => $group_id]));
     }
+
     return $breadcrumb;
   }
 
@@ -70,7 +71,7 @@ class EnropeBreadcrumbBuilder implements BreadcrumbBuilderInterface
     } elseif ($content_type == 'group_page') {
       return ["name" => 'Pages', 'route' => "view.group_pages.page_1"];
     } elseif ($content_type == 'resources') {
-      return ["name" => 'Resources', 'route' => "view.resources.page_1"];
+      return ["name" => 'Resources', 'route' => "view.group_resources.page_1"];
     } elseif ($content_type == 'discussion_board') {
       return ['name' => 'Discussions', 'route' => "view.discussion_board.page_1"];
     } elseif ($content_type == 'group_task') {

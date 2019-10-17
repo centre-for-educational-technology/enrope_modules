@@ -135,6 +135,7 @@ class EnropeExportController extends ControllerBase
       if (!empty($data['abstract'])) fwrite($csvFile, 'abstract = "'.$data['abstract'].'"'. ",\n");
       if (!empty($data['annotation'])) fwrite($csvFile, 'annote = "'.$data['annotation'].'"'. ",\n");
       if (!empty($data['language'])) fwrite($csvFile, 'language = "'.$data['language'].'"'. ",\n");
+      if (!empty($data['link'])) fwrite($csvFile, 'url = "'.$data['link'].'"'. ",\n");
       fwrite($csvFile, '}');
 
       fclose($csvFile);
