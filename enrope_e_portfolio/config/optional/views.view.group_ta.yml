@@ -10,7 +10,7 @@ dependencies:
     - group
     - node
 _core:
-  default_config_hash: pOH3ndJ2T6uPyKo-ne6pDQZGoJRaU7Eox7JFPiWBBsg
+  default_config_hash: XeAk4WFkMcCGbHLwPn-6llKuMg3TOPK_4aMH54QLWB8
 id: group_ta
 label: 'Group tasks'
 module: gnode
@@ -585,7 +585,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: true
           expose:
             label: Changed
@@ -607,7 +607,20 @@ display:
           entity_type: group_content
           entity_field: label
           plugin_id: standard
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<div class=\"alert alert-primary\" role=\"alert\">\r\nIn this section, you find all e-portfolio tasks that we asked this particular group to complete.\r\n</div>"
+            format: full_html
+          plugin_id: text
       footer: {  }
       empty:
         area_text_custom:

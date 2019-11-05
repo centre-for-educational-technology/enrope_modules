@@ -10,7 +10,7 @@ dependencies:
     - group
     - node
 _core:
-  default_config_hash: ZSKjHkl45YTbsYHiq_H7py04GDuX95t-GOHAAb8ZFbk
+  default_config_hash: pOH3ndJ2T6uPyKo-ne6pDQZGoJRaU7Eox7JFPiWBBsg
 id: discussion_board
 label: 'Discussion board'
 module: gnode
@@ -585,7 +585,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: true
           expose:
             label: Changed
@@ -607,7 +607,20 @@ display:
           entity_type: group_content
           entity_field: label
           plugin_id: standard
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<div class=\"alert alert-primary\" role=\"alert\">\r\nAnything you would like to discuss with the other group members? Please use this discussion board for sharing your ideas, questions and opinions\r\n</div>"
+            format: full_html
+          plugin_id: text
       footer: {  }
       empty:
         area_text_custom:

@@ -10,7 +10,7 @@ dependencies:
     - group
     - node
 _core:
-  default_config_hash: ZSKjHkl45YTbsYHiq_H7py04GDuX95t-GOHAAb8ZFbk
+  default_config_hash: b4NpJ6mFX7f4qwIfAulaOd4mAPcqliFtQDGFCwFlzm4
 id: group_files_
 label: 'Group files'
 module: gnode
@@ -585,7 +585,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: true
           expose:
             label: Changed
@@ -607,7 +607,20 @@ display:
           entity_type: group_content
           entity_field: label
           plugin_id: standard
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<div class=\"alert alert-primary\" role=\"alert\">\r\nAny other files you would like to share with your group members? This is the place to do so...\r\n</div>"
+            format: full_html
+          plugin_id: text
       footer: {  }
       empty:
         area_text_custom:
