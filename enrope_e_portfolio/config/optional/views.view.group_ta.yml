@@ -73,14 +73,11 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: html_list
+        type: default
         options:
-          grouping: {  }
           row_class: ''
           default_row_class: true
-          type: ul
-          wrapper_class: item-list
-          class: ''
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
@@ -578,35 +575,35 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts:
-        changed:
-          id: changed
-          table: node_field_revision
-          field: changed
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: true
-          expose:
-            label: Changed
-          granularity: day
-          entity_type: node
-          entity_field: changed
-          plugin_id: date
-        label:
-          id: label
-          table: group_content_field_data
-          field: label
-          relationship: group_content
           group_type: group
           admin_label: ''
           order: ASC
           exposed: true
           expose:
             label: Title
-          entity_type: group_content
-          entity_field: label
+          entity_type: node
+          entity_field: title
           plugin_id: standard
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: 'Authored on'
+          granularity: day
+          entity_type: node
+          entity_field: created
+          plugin_id: date
       header:
         area:
           id: area
