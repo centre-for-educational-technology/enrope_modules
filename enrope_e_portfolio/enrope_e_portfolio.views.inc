@@ -3,13 +3,22 @@
  * Implements hook_views_data_alter().
  */
 function enrope_e_portfolio_views_data_alter(array &$data) {
-  $data['node']['node_type_flagger'] = array(
-    'title' => t('Node type flagger'),
+  $data['node']['answer_task_status'] = array(
+    'title' => t('Status of task answer'),
     'group' => t('Content'),
     'field' => array(
-      'title' => t('Node type flagger'),
-      'help' => t('Flags a specific node type.'),
-      'id' => 'node_type_flagger',
+      'title' => t('Status of task answer'),
+      'help' => t('Status of task answer'),
+      'id' => 'answer_task_status',
+    ),
+  );
+  $data['node']['answer_task_action'] = array(
+    'title' => t('Action for task answer'),
+    'group' => t('Content'),
+    'field' => array(
+      'title' => t('Action for task answer'),
+      'help' => t('Action for task answer'),
+      'id' => 'answer_task_action',
     ),
   );
 }
