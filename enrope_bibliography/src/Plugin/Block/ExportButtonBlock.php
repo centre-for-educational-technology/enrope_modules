@@ -41,30 +41,36 @@ class ExportButtonBlock extends BlockBase
     $nid_fld = $node->nid->getValue();
     $nid = $nid_fld[0]['value'];
 
-    $build['export_links'] = [
-      '#type' => 'container',
-      '#attributes' => [
-        'class' => ['btn-group btn-group-lg'],
-      ],
-    ];
+    $build = [];
 
-    $build['export_links']['link_ris'] = [
-      '#type' => 'link',
-      '#title' => 'Export RIS',
-      '#url' => Url::fromRoute('enrope_bibliography.exportRIS', array('node' => $nid)),
-      '#attributes' => [
-        'class' => ['btn btn-success mb-4'],
-      ],
-    ];
+    if($nid){
+      $build['export_links'] = [
+        '#type' => 'container',
+        '#attributes' => [
+          'class' => ['btn-group btn-group-lg'],
+        ],
+      ];
 
-    $build['export_links']['link_bib'] = [
-      '#type' => 'link',
-      '#title' => 'Export Bibtex',
-      '#url' => Url::fromRoute('enrope_bibliography.exportBIB', array('node' => $nid)),
-      '#attributes' => [
-        'class' => ['btn btn-success mb-4'],
-      ],
-    ];
+      $build['export_links']['link_ris'] = [
+        '#type' => 'link',
+        '#title' => 'Export RIS',
+        '#url' => Url::fromRoute('enrope_bibliography.exportRIS', array('node' => $nid)),
+        '#attributes' => [
+          'class' => ['btn btn-success mb-4'],
+        ],
+      ];
+
+      $build['export_links']['link_bib'] = [
+        '#type' => 'link',
+        '#title' => 'Export Bibtex',
+        '#url' => Url::fromRoute('enrope_bibliography.exportBIB', array('node' => $nid)),
+        '#attributes' => [
+          'class' => ['btn btn-success mb-4'],
+        ],
+      ];
+    }
+
+
 
     return $build;
   }
