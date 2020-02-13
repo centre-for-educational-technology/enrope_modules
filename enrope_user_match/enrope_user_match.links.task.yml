@@ -1,0 +1,6 @@
+enrope_user_match.content:
+  route_name: enrope_user_match.content
+  type: tab
+  title: 'Hello module settings'
+  description: ''
+  base_route: enrope_menu.profile
