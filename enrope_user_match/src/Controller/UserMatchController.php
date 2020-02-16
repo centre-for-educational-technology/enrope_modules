@@ -41,7 +41,7 @@ class UserMatchController extends ControllerBase {
 
       return [
         '#type' => 'markup',
-        '#markup' => render(user_view_multiple($matched_users, 'compact')),
+        '#markup' => render(user_view_multiple($matched_users, 'enrope_user_in_members_list')),
         '#prefix' => '<div class="alert alert-primary" role="alert">
                       '.t("This is a list of other members of ENROPE that have similar interests in their profiles").'
                     </div><div class="view-content row">',
