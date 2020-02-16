@@ -1,6 +1,8 @@
-name: Enrope bibliography module
-description: Annotated bibliography
+name: Enrope user match module
+description: User match
 package: Enrope
 type: module
 version: 1.0
 core: 8.x
+dependencies:
+  - search_api

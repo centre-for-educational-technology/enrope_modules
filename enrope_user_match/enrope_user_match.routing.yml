@@ -1,0 +1,10 @@
+enrope_user_match.content:
+  path: 'user/{user}/user-match'
+  defaults:
+    _controller: '\Drupal\enrope_user_match\Controller\UserMatchController::content'
+    _title: 'Matched users'
+  requirements:
+    _permission: 'access content'
+  options:
+    user: \d+
+

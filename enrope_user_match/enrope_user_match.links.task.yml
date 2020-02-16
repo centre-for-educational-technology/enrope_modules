@@ -1,6 +1,7 @@
 enrope_user_match.content:
   route_name: enrope_user_match.content
   type: tab
-  title: 'Hello module settings'
+  title: 'Matched users'
   description: ''
-  base_route: enrope_menu.profile
+  base_route: entity.user.canonical
+  weight: 7
