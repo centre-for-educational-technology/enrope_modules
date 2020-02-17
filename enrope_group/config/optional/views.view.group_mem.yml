@@ -1,11 +1,11 @@
-uuid: 77c92d14-b632-41af-a7f2-c4c39abaa5e9
+uuid: e7f82fc4-6f2f-4aeb-9df1-d7f29adf08c4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.group_content.group_roles
     - field.storage.user.field_first_name
-    - field.storage.user.field_user_picture
+    - field.storage.user.user_picture
     - image.style.avatar
   enforced:
     module:
@@ -84,7 +84,7 @@ display:
           row_class: ''
           default_row_class: false
           type: ul
-          wrapper_class: ''
+          wrapper_class: item-list
           class: ''
       row:
         type: fields
@@ -145,7 +145,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -157,10 +157,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_user_picture:
-          id: field_user_picture
-          table: user__field_user_picture
-          field: field_user_picture
+        user_picture:
+          id: user_picture
+          table: user__user_picture
+          field: user_picture
           relationship: gc__user
           group_type: group
           admin_label: ''
@@ -204,7 +204,7 @@ display:
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: false
+          hide_alter_empty: true
           click_sort_column: target_id
           type: image
           settings:
@@ -265,7 +265,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: '<ul class="list-group"><li class="list-group-item">member</li></ul>'
+          empty: '<div class="item-list"><ul><li>member</li></ul></div>'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -511,14 +511,16 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
+        1: 'languages:language_content'
+        2: 'languages:language_interface'
+        3: url
+        4: url.query_args
+        5: route.group
+        6: user.group_permissions
       tags:
         - 'config:field.storage.group_content.group_roles'
         - 'config:field.storage.user.field_first_name'
-        - 'config:field.storage.user.field_user_picture'
+        - 'config:field.storage.user.user_picture'
   page_1:
     display_plugin: page
     id: page_1
@@ -539,11 +541,13 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
+        1: 'languages:language_content'
+        2: 'languages:language_interface'
+        3: url
+        4: url.query_args
+        5: route.group
+        6: user.group_permissions
       tags:
         - 'config:field.storage.group_content.group_roles'
         - 'config:field.storage.user.field_first_name'
-        - 'config:field.storage.user.field_user_picture'
+        - 'config:field.storage.user.user_picture'

@@ -28,7 +28,8 @@ class GroupContentOperationsBlock extends BlockBase {
     //
     // We do not need to specify the current user or group as cache contexts
     // because, in essence, a group membership is a union of both.
-    $build['#cache']['contexts'] = ['group.type', 'group_membership.roles.permissions'];
+    //$build['#cache']['contexts'] = ['group.type', 'group_membership.roles.permissions'];
+    $build['#cache']['contexts'] = ['group.type'];
 
     // Of special note is the cache context 'group_membership.audience'. Where
     // the above cache contexts should suffice if everything is ran through the
