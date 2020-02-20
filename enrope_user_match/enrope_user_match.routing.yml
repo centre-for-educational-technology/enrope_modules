@@ -2,9 +2,17 @@ enrope_user_match.content:
   path: 'user/{user}/user-match'
   defaults:
     _controller: '\Drupal\enrope_user_match\Controller\UserMatchController::content'
-    _title: 'Matched users'
+    _title: 'My network'
   requirements:
     _permission: 'access content'
   options:
     user: \d+
+
+enrope_user_match.all_user_keywords:
+  path: 'get-keywords'
+  defaults:
+    _form: '\Drupal\enrope_user_match\Form\KeywordsForm'
+    _title: 'All users keywords'
+  requirements:
+    _permission: 'administer site configuration'
 

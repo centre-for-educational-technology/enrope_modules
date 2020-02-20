@@ -1,7 +1,7 @@
 enrope_user_match.content:
   route_name: enrope_user_match.content
   type: tab
-  title: 'Matched users'
+  title: 'My network'
   description: ''
   base_route: entity.user.canonical
   weight: 7
