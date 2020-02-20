@@ -8,6 +8,7 @@ use Drupal\Core\Link;
 use Drupal\Core\StreamWrapper\PrivateStream;
 use Drupal\Core\StreamWrapper\PublicStream;
 use Drupal\Core\Url;
+use Drupal\file\Entity\File;
 
 class KeywordsForm extends FormBase {
 
@@ -101,27 +102,23 @@ class KeywordsForm extends FormBase {
     $messenger = \Drupal::messenger();
 
     if ($success) {
-      $private_path = PrivateStream::basepath();
-      $public_path = PublicStream::basepath();
-      $file_base = ($private_path) ? $private_path : $public_path;
-      $name = 'enrope_users_keywords';
-      $filename = $name . '.txt';
-      $filepath = $file_base . '/' . $filename;
-      $csvFile = fopen($filepath, "w");
-
-
+      $keywords = '';
       foreach ($results['keywords'] as $keyword) {
-        fwrite($csvFile, implode( ", ", $keyword ));
+        if(!empty($keyword)){
+          $keywords .= implode(", ", $keyword).", " ;
+        }
+
       }
 
-      fclose($csvFile);
+      $file_save_path_stream_directory = 'public://keywords';
+      file_prepare_directory($file_save_path_stream_directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
+      $fileLocation = $file_save_path_stream_directory . '/' . 'enrope_users_keywords.txt';
+      $file = file_save_data($keywords, $fileLocation, FILE_EXISTS_REPLACE);
 
-      header('Content-Type: application/x-research-info-systems');
-      header('Content-Disposition: attachment; filename="' . basename($filepath) . '";');
-      header('Content-Length: ' . filesize($filepath));
+      $file_uri = $file->getFileUri();
+      $url = Url::fromUri(file_create_url($file_uri));
 
-
-      $pass_link = \Drupal::l(t('right click and Save as'), Url::fromUri(file_create_url($filepath)));
+      $pass_link = \Drupal::l(t('right click and Save as'), $url);
 
       $messenger
         ->addMessage(t('Keywords ready, @link', ['@link' => $pass_link]));
