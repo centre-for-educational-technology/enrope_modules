@@ -4,6 +4,7 @@ namespace Drupal\enrope_user_match\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
 use Drupal\Core\StreamWrapper\PrivateStream;
 use Drupal\Core\StreamWrapper\PublicStream;
 use Drupal\Core\Url;
@@ -120,8 +121,7 @@ class KeywordsForm extends FormBase {
       header('Content-Length: ' . filesize($filepath));
 
 
-      $pass_link = \Drupal::l(t('right click and Save as'), Url::fromUri('internal:/'.$filepath));
-
+      $pass_link = \Drupal::l(t('right click and Save as'), Url::fromUri(file_create_url($filepath)));
 
       $messenger
         ->addMessage(t('Keywords ready, @link', ['@link' => $pass_link]));
