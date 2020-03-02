@@ -1,0 +1,174 @@
+<?php
+
+/**
+ * @file
+ * Contains enrope_send_email_notif.module.
+ */
+
+use Drupal\contact\Entity\Message;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_help().
+ */
+function enrope_send_email_notif_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    // Main module help for the enrope_send_email_notif module.
+    case 'help.page.enrope_send_email_notif':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enrope module to send email notifications') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function enrope_send_email_notif_theme()
+{
+  return [
+    'enrope_send_email_notif' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+
+function enrope_send_email_notif_entity_insert(Drupal\Core\Entity\EntityInterface $entity)
+{
+
+  //Group discussion board
+  if ($entity->bundle() == 'group_content_type_4d31e8d3ef1d8' || $entity->bundle() == 'group_content_type_bb5f5f86ef179') {
+
+    $members = db_query("SELECT entity_id FROM {group_content_field_data} WHERE gid = :gid AND type='isp_group_type-group_membership'", [':gid' => $entity->getGroup()->id()])->fetchAll();
+    $content_node_id = db_query("SELECT entity_id FROM {group_content_field_data} WHERE id = :id", [':id' => $entity->id()])->fetchField();
+
+    $mailManager = \Drupal::service('plugin.manager.mail');
+    $module = 'enrope_send_email_notif';
+    if ($entity->bundle() == 'group_content_type_4d31e8d3ef1d8') {
+      $key = 'create_desc_board';
+    } else {
+      $key = 'create_task';
+    }
+
+    $to = \Drupal::currentUser()->getEmail();
+    $params['node_title'] = $entity->label();
+    $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $content_node_id], ['absolute' => TRUE]);
+    $url = $url->toString();
+    $params['url'] = $url;
+    $langcode = \Drupal::currentUser()->getPreferredLangcode();
+    $send = true;
+
+
+    $emails = array();
+    if (!empty($members)) {
+      foreach (array_column($members, 'entity_id') as $item) {
+        $member_email = db_query("SELECT mail FROM {users_field_data} WHERE uid = :uid", [':uid' => $item])->fetchField();
+        array_push($emails, $member_email);
+
+      }
+      $emails_string = implode(", ", $emails);
+    }
+
+    if ($emails_string) {
+
+      //XXX change to $to to send only to author
+      $result = $mailManager->mail($module, $key, $emails_string, $langcode, $params, NULL, $send);
+      if ($result['result'] !== true) {
+        drupal_set_message(t('There was a problem sending email notifications and it was not sent.'), 'error');
+      } else {
+        drupal_set_message(t('Email notification has been sent to group members.'));
+      }
+    }
+  } else if ($entity->getEntityTypeId() === 'comment') {
+
+    //Get node this comment belongs to
+    $node = Node::load($entity->get('entity_id')->target_id);
+
+    if ($node->bundle() == 'discussion_board') {
+      $gid = db_query("SELECT gid FROM {group_content_field_data} WHERE entity_id = :entity_id", [':entity_id' => $node->id()])->fetchField();
+      $members = db_query("SELECT entity_id FROM {group_content_field_data} WHERE gid = :gid AND type='isp_group_type-group_membership'", [':gid' => $gid])->fetchAll();
+
+
+      $mailManager = \Drupal::service('plugin.manager.mail');
+      $module = 'enrope_send_email_notif';
+      $key = 'create_comment';
+      $to = \Drupal::currentUser()->getEmail();
+      //$params['message'] = $entity->get('comment_body')->value;
+      $params['node_title'] = $entity->label();
+      $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $node->id()], ['absolute' => TRUE]);
+      $url = $url->toString();
+      $params['url'] = $url . '#comment-' . $entity->id();
+
+      $langcode = \Drupal::currentUser()->getPreferredLangcode();
+      $send = true;
+
+
+      $emails = array();
+      if (!empty($members)) {
+        foreach (array_column($members, 'entity_id') as $item) {
+          $member_email = db_query("SELECT mail FROM {users_field_data} WHERE uid = :uid", [':uid' => $item])->fetchField();
+          array_push($emails, $member_email);
+
+        }
+        $emails_string = implode(", ", $emails);
+      }
+
+
+      if ($emails_string) {
+        //XXX change to $to to send only to author
+        $result = $mailManager->mail($module, $key, $emails_string, $langcode, $params, NULL, $send);
+        if ($result['result'] !== true) {
+          drupal_set_message(t('There was a problem sending email notifications and it was not sent.'), 'error');
+        } else {
+          drupal_set_message(t('Email notification has been sent to group members.'));
+        }
+      }
+
+
+    }
+
+
+  } else {
+    error_log(print_r($entity->bundle(), true));
+    return;
+  }
+
+}
+
+
+/**
+ * Implements hook_mail().
+ */
+function enrope_send_email_notif_mail($key, &$message, $params)
+{
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+
+  switch ($key) {
+    case 'create_desc_board':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('New ENROPE discussion added: @title', array('@title' => $params['node_title']), $options);
+      $message['body'][] .= "Read full on ENROPE " . $params['url'];
+      break;
+    case 'create_task':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('New ENROPE task added: @title', array('@title' => $params['node_title']), $options);
+      $message['body'][] .= "Go to task page on ENROPE " . $params['url'];
+      break;
+    case 'create_comment':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('New comment on ENROPE: @title', array('@title' => $params['node_title']), $options);
+      //$out = strlen($params['message']) > 50 ? substr($params['message'], 0, 50) . "..." : $params['message'];
+      //$message['body'][] = $out;
+      $message['body'][] .= "Read full on ENROPE " . $params['url'];
+      break;
+  }
+}

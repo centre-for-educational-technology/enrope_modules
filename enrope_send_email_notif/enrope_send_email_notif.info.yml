@@ -1,0 +1,7 @@
+name: 'Enrope send email notifications'
+type: module
+description: 'Enrope module to send email notifications'
+core: 8.x
+package: Enrope
+dependencies:
+  - group
