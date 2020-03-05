@@ -121,7 +121,7 @@ class AnswerTaskAction extends FieldPluginBase
     }
 
 
-    $url = Url::fromRoute('node.add', ['node_type' => $type]);
+    $url = Url::fromRoute('node.add', ['node_type' => $type, 'task_id' => $node->id()]);
     $link = Link::fromTextAndUrl(t('Submit answer'), $url);
     $link = $link->toRenderable();
     $link['#attributes'] = array('class' => array('btn', 'btn-primary'));

@@ -1,4 +1,10 @@
 <?php
+
+use Drupal\Core\Entity\EntityFormInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
@@ -10,3 +16,76 @@ use Drupal\Core\Access\AccessResult;
 //  }
 //  return AccessResult::neutral()->cachePerPermissions();
 //}
+
+/**
+ * Implements hook_form_alter().
+ */
+function enrope_e_portfolio_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+
+
+  if ($form_id == 'node_portfolio_competency_form' || $form_id == 'node_autobiography_form' || $form_id == 'node_portfolio_showcase_form') {
+
+
+    $task_id = \Drupal::request()->query->get('task_id');
+
+    if (empty($form['field_connected_task']['widget']['#default_value'])) {
+      if ($task_id) {
+        $form['field_connected_task']['widget']['#default_value'] = $task_id;
+        $form['field_connected_task']['#disabled'] = true;
+      }
+    }
+
+    if ($task_id) {
+      $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
+
+      $form['open_modal_task_preview'] = array(
+        '#type' => 'link',
+        '#title' => t('Preview task'),
+        '#url' => Url::fromRoute('entity.node.canonical', ['node' => $task_id]),
+        '#weight' => $form['field_connected_task']['#weight'] + 0.5,
+        '#attributes' => array(
+          'class' => array('button btn btn-success', 'use-ajax'),
+          'data-dialog-type' => 'modal',
+        ),
+        '#prefix' => '<div class="form-group col-auto">',
+        '#suffix' => '</div>',
+      );
+
+    }
+
+
+  }
+
+  if ($form_id == 'node_portfolio_competency_edit_form' || $form_id == 'node_autobiography_edit_form' || $form_id == 'node_portfolio_showcase_edit_form') {
+    if ($form_state->getFormObject() instanceOf EntityFormInterface) {
+      $node = $form_state->getformObject()->getEntity();
+
+      if (!empty($node)) {
+        $form['field_connected_task']['#disabled'] = true;
+        $task_id = $node->get('field_connected_task')->getValue()[0]['target_id'];
+        if (!empty($task_id)) {
+          $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
+
+          $form['open_modal_task_preview'] = array(
+            '#type' => 'link',
+            '#title' => t('Preview task'),
+            '#url' => Url::fromRoute('entity.node.canonical', ['node' => $task_id]),
+            '#weight' => $form['field_connected_task']['#weight'] + 0.5,
+            '#attributes' => array(
+              'class' => array('button btn btn-success', 'use-ajax'),
+              'data-dialog-type' => 'modal',
+            ),
+            '#prefix' => '<div class="form-group col-auto">',
+            '#suffix' => '</div>',
+          );
+        }
+
+
+      }
+
+    }
+  }
+
+
+}
