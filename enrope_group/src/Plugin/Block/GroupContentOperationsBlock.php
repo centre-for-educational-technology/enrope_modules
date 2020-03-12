@@ -101,6 +101,11 @@ class GroupContentOperationsBlock extends BlockBase {
 
   }
 
+  public function getCacheMaxAge() {
+    return 0;
+  }
+
+
 }
 
 
