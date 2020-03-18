@@ -1,0 +1,9 @@
+enrope_group.answers:
+  path: '/node/{node}/answers'
+  defaults:
+    _controller: '\Drupal\enrope_group\Controller\AnswersController::getOutput'
+    _title_callback: '\Drupal\enrope_group\Controller\AnswersController::getTitle'
+  requirements:
+    _permission: 'administer group'
+    _custom_access: '\Drupal\enrope_group\Controller\AnswersController::isAllowedAnswersList'
+

@@ -1,0 +1,5 @@
+enrope_group.answers:
+  route_name: enrope_group.answers
+  title: 'Answers'
+  base_route: entity.node.canonical
+  weight: 100

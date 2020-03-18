@@ -1,0 +1,6 @@
+<?php
+
+function enrope_webform_menu_local_tasks_alter(&$data, $route_name)
+{
+  unset($data['tabs'][0]['entity.webform_submission.user']);
+}
