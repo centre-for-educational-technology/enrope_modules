@@ -26,6 +26,27 @@ function enrope_group_menu_local_tasks_alter(&$data, $route_name) {
 
 }
 
+
+/**
+ * Implements hook_entity_presave().
+ */
+function enrope_group_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  if($entity->bundle() == 'autobiography'){
+
+    $task_id = $entity->get('field_connected_task')->getValue()[0]['target_id'];
+    $task = node_load($task_id);
+    $task_title = $task->get('title')->value;
+
+    if(!empty($task_title)){
+      $entity->setTitle($entity->getTitle().': '.$task_title);
+    }
+
+
+  }
+
+}
+
+
 /**
  * Implements hook_path_update().
  *

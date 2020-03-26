@@ -136,7 +136,6 @@ function enrope_send_email_notif_entity_insert(Drupal\Core\Entity\EntityInterfac
 
 
   } else {
-    error_log(print_r($entity->bundle(), true));
     return;
   }
 
