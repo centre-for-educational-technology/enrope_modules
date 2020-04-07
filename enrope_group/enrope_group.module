@@ -2,13 +2,17 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
-function enrope_group_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+function enrope_group_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
   // Adding custom validation for group join form
   if ($form_id == 'group_content_isp_group_type-group_membership_group-join_form') {
     $form['actions']['submit']['#submit'][] = '_custom_form_submit';
   }
 }
-function _custom_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+function _custom_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state)
+{
   //Redirect to group main page after join
   $group_content = $form_state->getFormObject()->getEntity();
   $group = $group_content->getGroup();
@@ -18,9 +22,9 @@ function _custom_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_
 }
 
 
-
 // Hide Delete tab of group
-function enrope_group_menu_local_tasks_alter(&$data, $route_name) {
+function enrope_group_menu_local_tasks_alter(&$data, $route_name)
+{
 
   unset($data['tabs'][0]['group.delete_form']);
 
@@ -30,15 +34,16 @@ function enrope_group_menu_local_tasks_alter(&$data, $route_name) {
 /**
  * Implements hook_entity_presave().
  */
-function enrope_group_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
-  if($entity->bundle() == 'autobiography'){
+function enrope_group_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
+{
+  if ($entity->bundle() == 'autobiography' || $entity->bundle() == 'portfolio_competency' | $entity->bundle() == 'portfolio_showcase') {
 
     $task_id = $entity->get('field_connected_task')->getValue()[0]['target_id'];
     $task = node_load($task_id);
     $task_title = $task->get('title')->value;
 
-    if(!empty($task_title)){
-      $entity->setTitle($entity->getTitle().': '.$task_title);
+    if (!empty($task_title)) {
+      $entity->setTitle($entity->getTitle() . ': ' . $task_title);
     }
 
 
