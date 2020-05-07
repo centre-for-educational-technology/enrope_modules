@@ -5,6 +5,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Url;
+use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
@@ -58,7 +59,7 @@ function enrope_e_portfolio_form_alter(&$form, FormStateInterface $form_state, $
   }
 
   if ($form_id == 'node_portfolio_competency_edit_form' || $form_id == 'node_autobiography_edit_form' || $form_id == 'node_portfolio_showcase_edit_form') {
-    if ($form_state->getFormObject() instanceOf EntityFormInterface) {
+    if ($form_state->getFormObject() instanceof EntityFormInterface) {
       $node = $form_state->getformObject()->getEntity();
 
       if (!empty($node)) {
@@ -88,4 +89,19 @@ function enrope_e_portfolio_form_alter(&$form, FormStateInterface $form_state, $
   }
 
 
+}
+
+
+/**
+ * Implements hook_theme() to add the template definition.
+ **/
+function enrope_e_portfolio_theme($existing, $type, $theme, $path)
+{
+  // Query for newest articles and return max 3 results.
+
+  return array(
+    'enrope_all_tasks_template' => array(
+      'variables' => array('items' => null),
+    ),
+  );
 }

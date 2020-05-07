@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="row">
+    {% if items|length %}
+      <ul>
+        {% for item in items %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {{ pager }}
+  </div>
+</div>
