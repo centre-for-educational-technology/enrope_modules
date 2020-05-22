@@ -4,4 +4,4 @@ enrope_e_portfolio.all_tasks:
     _controller: '\Drupal\enrope_e_portfolio\Controller\EnropeAllTasksPageController::content'
     _title: 'All ENROPE Tasks'
   requirements:
-    _permission: 'access content'
+    _user_is_logged_in: 'TRUE'
