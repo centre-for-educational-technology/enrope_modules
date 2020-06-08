@@ -5,4 +5,11 @@ enrope_group.answers:
     _title_callback: '\Drupal\enrope_group\Controller\AnswersController::getTitle'
   requirements:
     _custom_access: '\Drupal\enrope_group\Controller\AnswersController::isAllowedAnswersList'
-
+enrope_group.progress:
+  path: 'group/{group}/progress'
+  defaults:
+    _controller: '\Drupal\enrope_group\Controller\ProgressController::content'
+    _title: 'Progress'
+  requirements:
+    _permission: 'access content'
+    _role: 'moderator+administrator'

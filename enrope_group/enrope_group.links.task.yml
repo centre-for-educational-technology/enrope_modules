@@ -3,3 +3,10 @@ enrope_group.answers:
   title: 'Answers'
   base_route: entity.node.canonical
   weight: 100
+enrope_group.progress:
+  route_name: enrope_group.progress
+  type: tab
+  title: 'Progress'
+  description: ''
+  base_route: entity.group.canonical
+  weight: 18
