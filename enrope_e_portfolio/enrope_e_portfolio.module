@@ -9,6 +9,8 @@ use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\taxonomy\Entity\Vocabulary;
 
 
 //function enrope_e_portfolio_node_access(NodeInterface $node, $op, AccountInterface $account) {
@@ -104,4 +106,50 @@ function enrope_e_portfolio_theme($existing, $type, $theme, $path)
       'variables' => array('items' => null),
     ),
   );
+}
+
+
+/**
+ * Add Key notions vocabulary
+ */
+function enrope_e_portfolio_update_8001(&$sandbox)
+{
+  $vid = "key_notions";
+  $name = "Key notions";
+  $vocabularies = Vocabulary::loadMultiple();
+  if (!isset($vocabularies[$vid])) {
+    $vocabulary = Vocabulary::create(array(
+      'vid' => $vid,
+      'name' => $name,
+    ));
+    $vocabulary->save();
+  }
+
+
+  $items = [
+    'Agency',
+    'Autonomy',
+    'Collaboration',
+    'Critical discourse',
+    'Culture',
+    'Diversity',
+    'Education',
+    'Educational Cultures',
+    'Identity',
+    'Language(s) (homeschool / own / immersion)',
+    'Mediation',
+    'Pluri- / multi- / translingualism / translanguaging / translingual teaching',
+    'Role',
+    'Self-reflection and meta-reflection',
+    'Social representation'
+  ];
+  foreach ($items as $item) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' => $item,
+      'vid' => $vid,
+    ))->save();
+  }
+
+
 }
