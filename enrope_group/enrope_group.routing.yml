@@ -11,5 +11,4 @@ enrope_group.progress:
     _controller: '\Drupal\enrope_group\Controller\ProgressController::content'
     _title: 'Progress'
   requirements:
-    _permission: 'access content'
-    _role: 'moderator+administrator'
+    _group_permission: 'leave group'

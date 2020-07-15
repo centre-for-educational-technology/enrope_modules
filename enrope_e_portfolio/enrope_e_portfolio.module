@@ -50,6 +50,7 @@ function enrope_e_portfolio_form_alter(&$form, FormStateInterface $form_state, $
         '#attributes' => array(
           'class' => array('button btn btn-success', 'use-ajax'),
           'data-dialog-type' => 'modal',
+          'data-dialog-options' => '{"width":500,"dialogClass":"webform-ui-dialog"}',
         ),
         '#prefix' => '<div class="form-group col-auto">',
         '#suffix' => '</div>',
@@ -78,6 +79,7 @@ function enrope_e_portfolio_form_alter(&$form, FormStateInterface $form_state, $
             '#attributes' => array(
               'class' => array('button btn btn-success', 'use-ajax'),
               'data-dialog-type' => 'modal',
+              'data-dialog-options' => '{"width":500,"dialogClass":"webform-ui-dialog"}',
             ),
             '#prefix' => '<div class="form-group col-auto">',
             '#suffix' => '</div>',
