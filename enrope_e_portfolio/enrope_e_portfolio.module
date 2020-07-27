@@ -92,6 +92,16 @@ function enrope_e_portfolio_form_alter(&$form, FormStateInterface $form_state, $
     }
   }
 
+  if ($form_id == 'node_e_portfolio_form' || $form_id == 'node_e_portfolio_edit_form') {
+    $form['alert'] = [
+      '#type' => 'inline_template',
+      '#template' => '<div class="alert alert-primary" role="alert">
+  Your <strong>Published</strong> portfolio items like task answers, competencies, showcases and autobiography items are automatically linked once you save your first portfolio
+</div>',
+    ];
+  }
+
+
 
 }
 

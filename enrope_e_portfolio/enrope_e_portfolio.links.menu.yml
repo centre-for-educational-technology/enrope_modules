@@ -1,0 +1,8 @@
+enrope_e_portfolio.my_e_portfolio:
+  class: Drupal\enrope_e_portfolio\Plugin\Menu\MyEPortfolioMenuLink
+  description: ''
+  expanded: false
+  parent: 'menu_link_content:8171cf64-9d5f-4216-a791-c6a28561531a'
+  weight: 5
+  context: '0'
+  menu_name: main

@@ -39,19 +39,22 @@ function enrope_group_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
 {
   if ($entity->bundle() == 'autobiography' || $entity->bundle() == 'portfolio_competency' | $entity->bundle() == 'portfolio_showcase') {
 
-    $task_id = $entity->get('field_connected_task')->getValue()[0]['target_id'];
-    $task = Node::load($task_id);
-    $task_title = $task->get('title')->value;
+    if(!empty($entity->get('field_connected_task')->getValue()[0]['target_id'])){
+      $task_id = $entity->get('field_connected_task')->getValue()[0]['target_id'];
+      $task = Node::load($task_id);
+      $task_title = $task->get('title')->value;
 
-    if (!empty($task_title)) {
-      if (strpos($entity->getTitle(), $task_title) != true) {
+      if (!empty($task_title)) {
+        if (strpos($entity->getTitle(), $task_title) != true) {
 
-        $entity->setTitle($entity->getTitle() . ': ' . $task_title);
+          $entity->setTitle($entity->getTitle() . ': ' . $task_title);
 
-      };
+        };
 
 
+      }
     }
+
 
 
   }

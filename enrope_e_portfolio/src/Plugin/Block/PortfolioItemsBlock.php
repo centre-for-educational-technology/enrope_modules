@@ -186,9 +186,11 @@ class PortfolioItemsBlock extends BlockBase
     $query_items = $database->select('node_field_data', 'n');
     $query_items->fields('n', array('nid'));
     $query_items->condition('n.type', $type);
+    $query_items->condition('n.status', 1);
     $query_items->condition('n.uid', $portfolio->getOwnerId());
     $result_items = $query_items->execute()->fetchAll();
 
+    $rows = [];
 
     if (!empty($result_items)) {
 
@@ -242,7 +244,6 @@ class PortfolioItemsBlock extends BlockBase
 
             }
 
-            //error_log(print_r($keynotions, true));
 
           }
 
@@ -251,7 +252,7 @@ class PortfolioItemsBlock extends BlockBase
             case 'portfolio_showcase':
               $allowed_values = $item_node->getFieldDefinition('field_showcase_type')->getFieldStorageDefinition()->getSetting('allowed_values');
               $state_value = $item_node->get('field_showcase_type')->value;
-              $item_type = $allowed_values[$state_value];
+              $item_type = !empty($state_value) ? $allowed_values[$state_value] : '';
 
               $done_tasks++;
               $row = [$count++, Link::createFromRoute($item_node->getTitle(), 'entity.node.canonical', ['node' => $item_node->id()]), Link::createFromRoute($task->getTitle(), 'entity.node.canonical', ['node' => $task->id()]), $item_type, !empty($keynotions) ? $keynotions : '', $date_created, $date_modified];
@@ -260,7 +261,7 @@ class PortfolioItemsBlock extends BlockBase
             case 'portfolio_competency':
               $allowed_values = $item_node->getFieldDefinition('field_competency_type')->getFieldStorageDefinition()->getSetting('allowed_values');
               $state_value = $item_node->get('field_competency_type')->value;
-              $item_type = $allowed_values[$state_value];
+              $item_type = !empty($state_value) ? $allowed_values[$state_value] : '';
 
               $done_tasks++;
 
@@ -270,7 +271,7 @@ class PortfolioItemsBlock extends BlockBase
             case 'autobiography':
               $allowed_values = $item_node->getFieldDefinition('field_autobiography_type')->getFieldStorageDefinition()->getSetting('allowed_values');
               $state_value = $item_node->get('field_autobiography_type')->value;
-              $item_type = $allowed_values[$state_value];
+              $item_type = !empty($state_value) ? $allowed_values[$state_value] : '';
 
               $done_tasks++;
               $row = [$count++, Link::createFromRoute($item_node->getTitle(), 'entity.node.canonical', ['node' => $item_node->id()]), Link::createFromRoute($task->getTitle(), 'entity.node.canonical', ['node' => $task->id()]), $item_type, !empty($keynotions) ? $keynotions : '', $date_created, $date_modified];
@@ -282,7 +283,7 @@ class PortfolioItemsBlock extends BlockBase
             case 'portfolio_showcase':
               $allowed_values = $item_node->getFieldDefinition('field_showcase_type')->getFieldStorageDefinition()->getSetting('allowed_values');
               $state_value = $item_node->get('field_showcase_type')->value;
-              $item_type = $allowed_values[$state_value];
+              $item_type = !empty($state_value) ? $allowed_values[$state_value] : '';
 
               $row = [$count++, Link::createFromRoute($item_node->getTitle(), 'entity.node.canonical', ['node' => $item_node->id()]), '', $item_type, '', $date_created, $date_modified];
 
@@ -290,7 +291,7 @@ class PortfolioItemsBlock extends BlockBase
             case 'portfolio_competency':
               $allowed_values = $item_node->getFieldDefinition('field_competency_type')->getFieldStorageDefinition()->getSetting('allowed_values');
               $state_value = $item_node->get('field_competency_type')->value;
-              $item_type = $allowed_values[$state_value];
+              $item_type = !empty($state_value) ? $allowed_values[$state_value] : '';
 
               $row = [$count++, Link::createFromRoute($item_node->getTitle(), 'entity.node.canonical', ['node' => $item_node->id()]), '', $item_type, '', $date_created, $date_modified];
 
@@ -298,7 +299,7 @@ class PortfolioItemsBlock extends BlockBase
             case 'autobiography':
               $allowed_values = $item_node->getFieldDefinition('field_autobiography_type')->getFieldStorageDefinition()->getSetting('allowed_values');
               $state_value = $item_node->get('field_autobiography_type')->value;
-              $item_type = $allowed_values[$state_value];
+              $item_type = !empty($state_value) ? $allowed_values[$state_value] : '';
 
               $row = [$count++, Link::createFromRoute($item_node->getTitle(), 'entity.node.canonical', ['node' => $item_node->id()]), '', $item_type, '', $date_created, $date_modified];
 
@@ -313,5 +314,10 @@ class PortfolioItemsBlock extends BlockBase
     }
 
     return array('rows' => $rows, 'done_tasks' => $done_tasks);
+  }
+
+  public function getCacheMaxAge()
+  {
+    return 0;
   }
 }
