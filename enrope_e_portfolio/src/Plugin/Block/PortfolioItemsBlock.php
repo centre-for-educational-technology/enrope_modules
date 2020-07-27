@@ -60,7 +60,7 @@ class PortfolioItemsBlock extends BlockBase
     if (!empty($user_groups)) {
       foreach (array_column($user_groups, 'gid') as $group) {
         $group_showcases_tasks_count += $this->getGroupTasksCountByPortfolioType($group, 'showcase');
-        $group_competency_tasks_count += $this->getGroupTasksCountByPortfolioType($group, 'competency');
+        $group_competency_tasks_count += $this->getGroupTasksCountByPortfolioType($group, 'competences');
         $group_autobiography_tasks_count += $this->getGroupTasksCountByPortfolioType($group, 'autobiography');
       }
     }
