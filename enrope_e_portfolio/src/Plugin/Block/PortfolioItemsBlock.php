@@ -85,23 +85,25 @@ class PortfolioItemsBlock extends BlockBase
     }
 
 
-    $build['showcases']['showcases_header'] = array(
-      '#markup' => '<h3>' . t('Showcases') . '</h3>',
+    $build['autobiography']['autobiography_header'] = array(
+      '#markup' => '<h3>' . t('Autobiography') . '</h3>',
       '#type' => 'markup',
     );
 
-    $build['showcases']['showcases_progress'] = [
+    $build['autobiography']['autobiography_progress'] = [
       '#type' => 'inline_template',
       '#template' => '<div class="progress">
-  <div class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_showcases}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_showcases}}%"></div>
+  <div data-toggle="tooltip" data-placement="top" title="You have done {{done_autobiography}} out of {{total_autobiography}} possible tasks" class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_autobiography_perc}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_autobiography_perc}}%"></div>
 </div>',
       '#context' => [
-        'done_showcases' => $done_showcases,
+        'done_autobiography_perc' => $done_autobiography,
+        'done_autobiography' => $autobiography_tasks_done,
+        'total_autobiography' => $group_autobiography_tasks_count,
       ]
     ];
-    $build['showcases']['showcases_table'] = array(
+    $build['autobiography']['autobiography_table'] = array(
       '#theme' => 'table', '#header' => $header,
-      '#rows' => $showcases_rows
+      '#rows' => $autobiography_rows
     );
 
 
@@ -113,10 +115,12 @@ class PortfolioItemsBlock extends BlockBase
     $build['competency']['competency_progress'] = [
       '#type' => 'inline_template',
       '#template' => '<div class="progress">
-  <div class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_competency}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_competency}}%"></div>
+  <div data-toggle="tooltip" data-placement="top" title="You have done {{done_competency}} out of {{total_competency}} possible tasks" class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_competency_perc}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_competency_perc}}%"></div>
 </div>',
       '#context' => [
-        'done_competency' => $done_competency,
+        'done_competency_perc' => $done_competency,
+        'done_competency' => $competency_tasks_done,
+        'total_competency' => $group_competency_tasks_count,
       ]
     ];
     $build['competency']['competency_table'] = array(
@@ -124,24 +128,25 @@ class PortfolioItemsBlock extends BlockBase
       '#rows' => $competency_rows
     );
 
-
-    $build['autobiography']['autobiography_header'] = array(
-      '#markup' => '<h3>' . t('Autobiography') . '</h3>',
+    $build['showcases']['showcases_header'] = array(
+      '#markup' => '<h3>' . t('Showcases') . '</h3>',
       '#type' => 'markup',
     );
 
-    $build['autobiography']['autobiography_progress'] = [
+    $build['showcases']['showcases_progress'] = [
       '#type' => 'inline_template',
       '#template' => '<div class="progress">
-  <div class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_autobiography}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_autobiography}}%"></div>
+  <div data-toggle="tooltip" data-placement="top" title="You have done {{done_showcases}} out of {{total_showcases}} possible tasks" class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_showcases_perc}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_showcases_perc}}%"></div>
 </div>',
       '#context' => [
-        'done_autobiography' => $done_autobiography,
+        'done_showcases_perc' => $done_showcases,
+        'done_showcases' => $showcases_tasks_done,
+        'total_showcases' => $group_showcases_tasks_count,
       ]
     ];
-    $build['autobiography']['autobiography_table'] = array(
+    $build['showcases']['showcases_table'] = array(
       '#theme' => 'table', '#header' => $header,
-      '#rows' => $autobiography_rows
+      '#rows' => $showcases_rows
     );
 
 
