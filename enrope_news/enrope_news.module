@@ -7,9 +7,9 @@ function enrope_news_theme($existing, $type, $theme, $path)
 {
   return array(
 
-      'enrope_twitter_block_template' => array(
-          'variables' => array(),
-      ),
+    'enrope_twitter_block_template' => array(
+      'variables' => array(),
+    ),
 
 
   );
@@ -23,10 +23,13 @@ function enrope_news_user_format_name_alter(&$name, $account)
   // Load the full user account.
   $account = \Drupal\user\Entity\User::load($account->id());
   // Get the full name from field_name.
-  $first_name = $account->get('field_first_name')->value;
-  $last_name = $account->get('field_last_name')->value;
-  // If there's a value, set it as the new $name.
-  if (!empty($first_name)) {
-    $name = $first_name . ' ' . $last_name;
+  if ($account) {
+    $first_name = $account->get('field_first_name')->value;
+    $last_name = $account->get('field_last_name')->value;
+    // If there's a value, set it as the new $name.
+    if (!empty($first_name)) {
+      $name = $first_name . ' ' . $last_name;
+    }
   }
+
 }
