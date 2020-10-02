@@ -1,0 +1,33 @@
+uuid: b2ff68bc-c4f7-4e04-bb51-6b9e995e2869
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_target_area_of_competence2
+field_name: field_target_area_of_competence2
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: language_and_cultures
+      label: 'Language and cultures'
+    -
+      value: research_teaching_and_learning
+      label: 'Research, teaching and learning'
+    -
+      value: identity_and_role
+      label: 'Identity and role'
+    -
+      value: cooperation_and_development
+      label: 'Cooperation and development'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
