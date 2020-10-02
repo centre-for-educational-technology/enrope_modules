@@ -1,0 +1,13 @@
+diff --git a/src/Controller/AjaxController.php b/src/Controller/AjaxController.php
+index 051b1c0..7497b9b 100644
+--- a/src/Controller/AjaxController.php
++++ b/src/Controller/AjaxController.php
+@@ -186,7 +186,7 @@ class AjaxController extends ControllerBase implements AjaxControllerInterface {
+       if ($account->access('view', $this->currentUser)) {
+         $user_info[] = [
+           'uid' => $account->id(),
+-          'username' => $account->getDisplayName(),
++          'username' => $account->getAccountName(),
+         ];
+       }
+     }
