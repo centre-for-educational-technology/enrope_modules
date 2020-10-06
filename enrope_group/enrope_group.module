@@ -6,6 +6,7 @@ use Drupal\node\Entity\Node;
 
 function enrope_group_form_alter(&$form, FormStateInterface $form_state, $form_id)
 {
+
   // Adding custom validation for group join form
   if ($form_id == 'group_content_isp_group_type-group_membership_group-join_form') {
     $form['actions']['submit']['#submit'][] = '_custom_form_submit';
@@ -37,9 +38,9 @@ function enrope_group_menu_local_tasks_alter(&$data, $route_name)
  */
 function enrope_group_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
 {
-  if ($entity->bundle() == 'autobiography' || $entity->bundle() == 'portfolio_competency' | $entity->bundle() == 'portfolio_showcase') {
+  if ($entity->bundle() == 'autobiography' || $entity->bundle() == 'portfolio_competency' || $entity->bundle() == 'portfolio_showcase') {
 
-    if(!empty($entity->get('field_connected_task')->getValue()[0]['target_id'])){
+    if (!empty($entity->get('field_connected_task')->getValue()[0]['target_id'])) {
       $task_id = $entity->get('field_connected_task')->getValue()[0]['target_id'];
       $task = Node::load($task_id);
       $task_title = $task->get('title')->value;
@@ -49,14 +50,20 @@ function enrope_group_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
 
           $entity->setTitle($entity->getTitle() . ': ' . $task_title);
 
-        };
+        }
 
 
       }
     }
 
+  } else if ($entity->bundle() == 'e_portfolio') {
+    $user = \Drupal::currentUser()->id();
+    $account = \Drupal\user\Entity\User::load($user);
 
+    $first_name = $account->get('field_first_name')->value;
+    $last_name = $account->get('field_last_name')->value;
 
+    $entity->setTitle($first_name . " " . $last_name . "'s e-Portfolio");
   }
 
 }

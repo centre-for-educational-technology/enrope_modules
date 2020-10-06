@@ -93,6 +93,18 @@ function enrope_e_portfolio_form_alter(&$form, FormStateInterface $form_state, $
   }
 
   if ($form_id == 'node_e_portfolio_form' || $form_id == 'node_e_portfolio_edit_form') {
+
+    $user = \Drupal::currentUser()->id();
+    $account = \Drupal\user\Entity\User::load($user);
+
+
+    $first_name = $account->get('field_first_name')->value;
+    $last_name = $account->get('field_last_name')->value;
+
+    $title = $first_name . " " . $last_name . "'s e-Portfolio";
+    $form['title']['widget'][0]['value']['#value'] = $title;
+    $form['title']['widget'][0]['value']['#attributes'] = array('readonly' => 'readonly');
+
     $form['alert'] = [
       '#type' => 'inline_template',
       '#template' => '<div class="alert alert-primary" role="alert">
@@ -100,7 +112,6 @@ function enrope_e_portfolio_form_alter(&$form, FormStateInterface $form_state, $
 </div>',
     ];
   }
-
 
 
 }
