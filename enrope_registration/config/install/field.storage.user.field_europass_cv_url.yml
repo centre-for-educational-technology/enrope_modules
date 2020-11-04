@@ -1,0 +1,19 @@
+uuid: 4a3b78f7-3fe6-4bca-903e-667a1e7d4ec8
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - user
+id: user.field_europass_cv_url
+field_name: field_europass_cv_url
+entity_type: user
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
