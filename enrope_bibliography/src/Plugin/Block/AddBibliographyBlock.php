@@ -23,7 +23,7 @@ class AddBibliographyBlock extends BlockBase {
 
     $build['link'] = [
         '#type' => 'link',
-        '#title' => 'Add annotated bibliography',
+        '#title' => 'Add item to annotated bibliography',
         '#url' => Url::fromRoute('node.add', ['node_type' => 'annotated_bibliography']),
         '#attributes' => [
             'class' => ['btn btn-success mb-4'],

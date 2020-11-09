@@ -59,13 +59,13 @@ class MyEPortfolioMenuLink extends MenuLinkDefault
 
     if (!empty($this->portfolio)) {
       if($this->portfolio[0]->status == 1){
-        return \Drupal\Core\Render\Markup::create($this->t('View portfolio').' <span class="badge badge-success">Published</span>');
+        return \Drupal\Core\Render\Markup::create($this->t('View my e-portfolio').' <span class="badge badge-success">Published</span>');
       }else{
-        return \Drupal\Core\Render\Markup::create($this->t('View portfolio').' <span class="badge badge-danger">Draft</span>');
+        return \Drupal\Core\Render\Markup::create($this->t('View my e-portfolio').' <span class="badge badge-danger">Draft</span>');
       }
 
     } else {
-      return $this->t('Create portfolio');
+      return $this->t('Create e-portfolio');
     }
   }
 
