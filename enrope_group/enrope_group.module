@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
@@ -67,6 +70,47 @@ function enrope_group_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
   }
 
 }
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function enrope_group_entity_base_field_info(EntityTypeInterface $entity_type) {
+  if ($entity_type->id() === 'group') {
+    $fields = [];
+
+
+    // Add a field that shows a link to the user's current company.
+    $fields['enrope_group_join_leave'] = BaseFieldDefinition::create('enrope_group_join_leave')
+      ->setName('enrope_group_join_leave')
+      ->setLabel(t('Join/Leave buttons'))
+      ->setComputed(TRUE)
+      ->setClass('\Drupal\enrope_group\EnropeGroupJoinLeaveLinkItemList')
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'weight' => -5,
+      ]);
+
+    return $fields;
+  }
+}
+
+
+/**
+ * Implements hook_field_formatter_info_alter().
+ */
+function enrope_group_field_formatter_info_alter(array &$info) {
+  $info['link']['field_types'][] = 'enrope_group_join_leave';
+}
+
+/**
+ * Implements hook_field_widget_info_alter().
+ */
+function enrope_group_field_widget_info_alter(array &$info) {
+  $info['link_default']['field_types'][] = 'enrope_group_join_leave';
+}
+
+
 
 
 /**
