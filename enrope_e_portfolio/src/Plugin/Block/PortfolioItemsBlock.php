@@ -93,7 +93,7 @@ class PortfolioItemsBlock extends BlockBase
     $build['autobiography']['autobiography_progress'] = [
       '#type' => 'inline_template',
       '#template' => '<div class="progress">
-  <div data-toggle="tooltip" data-placement="top" title="You have done {{done_autobiography}} out of {{total_autobiography}} possible tasks" class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_autobiography_perc}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_autobiography_perc}}%"></div>
+  <div data-toggle="tooltip" data-placement="top" title="You have done {{done_autobiography}} out of {{total_autobiography}} possible tasks. (Please note: This calculation doesn’t include individual items that you may have uploaded.)" class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_autobiography_perc}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_autobiography_perc}}%"></div>
 </div>',
       '#context' => [
         'done_autobiography_perc' => $done_autobiography,
@@ -115,7 +115,7 @@ class PortfolioItemsBlock extends BlockBase
     $build['competency']['competency_progress'] = [
       '#type' => 'inline_template',
       '#template' => '<div class="progress">
-  <div data-toggle="tooltip" data-placement="top" title="You have done {{done_competency}} out of {{total_competency}} possible tasks" class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_competency_perc}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_competency_perc}}%"></div>
+  <div data-toggle="tooltip" data-placement="top" title="You have done {{done_competency}} out of {{total_competency}} possible tasks. (Please note: This calculation doesn’t include individual items that you may have uploaded.)" class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_competency_perc}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_competency_perc}}%"></div>
 </div>',
       '#context' => [
         'done_competency_perc' => $done_competency,
@@ -136,7 +136,7 @@ class PortfolioItemsBlock extends BlockBase
     $build['showcases']['showcases_progress'] = [
       '#type' => 'inline_template',
       '#template' => '<div class="progress">
-  <div data-toggle="tooltip" data-placement="top" title="You have done {{done_showcases}} out of {{total_showcases}} possible tasks" class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_showcases_perc}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_showcases_perc}}%"></div>
+  <div data-toggle="tooltip" data-placement="top" title="You have done {{done_showcases}} out of {{total_showcases}} possible tasks. (Please note: This calculation doesn’t include individual items that you may have uploaded.)" class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="{{done_showcases_perc}}" aria-valuemin="0" aria-valuemax="100" style="width: {{done_showcases_perc}}%"></div>
 </div>',
       '#context' => [
         'done_showcases_perc' => $done_showcases,

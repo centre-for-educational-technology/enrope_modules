@@ -73,6 +73,13 @@ class EnropeGroupJoinLeaveLinkItem extends LinkItem
             $value = [
               'uri' => $link_string,
               'title' => t('Leave'),
+              'options' => [
+                'attributes' => [
+                  'class' => [
+                    'btn btn-danger'
+                  ]
+                ],
+              ]
             ];
             $this->setValue($value);
           }
@@ -82,6 +89,13 @@ class EnropeGroupJoinLeaveLinkItem extends LinkItem
           $value = [
             'uri' => $link_string,
             'title' => t('Join'),
+            'options' => [
+              'attributes' => [
+                'class' => [
+                  'btn btn-success'
+                ]
+              ],
+            ]
           ];
           $this->setValue($value);
         }

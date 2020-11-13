@@ -72,6 +72,7 @@ function enrope_group_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
 }
 
 /**
+ * Join/Leave button field for group teaser display
  * Implements hook_entity_base_field_info().
  */
 function enrope_group_entity_base_field_info(EntityTypeInterface $entity_type) {
@@ -79,7 +80,6 @@ function enrope_group_entity_base_field_info(EntityTypeInterface $entity_type) {
     $fields = [];
 
 
-    // Add a field that shows a link to the user's current company.
     $fields['enrope_group_join_leave'] = BaseFieldDefinition::create('enrope_group_join_leave')
       ->setName('enrope_group_join_leave')
       ->setLabel(t('Join/Leave buttons'))
