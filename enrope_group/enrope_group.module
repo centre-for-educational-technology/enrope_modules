@@ -108,9 +108,9 @@ function enrope_group_group_view(array &$build, GroupInterface $node, $display, 
 /**
  * Implements hook_field_formatter_info_alter().
  */
-//function enrope_group_field_formatter_info_alter(array &$info) {
-//  $info['link']['field_types'][] = 'enrope_group_join_leave';
-//}
+function enrope_group_field_formatter_info_alter(array &$info) {
+  $info['link']['field_types'][] = 'enrope_group_join_leave';
+}
 
 /**
  * Implements hook_field_widget_info_alter().
