@@ -5,7 +5,9 @@ use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+use Drupal\group\Entity\GroupInterface;
 use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 
 function enrope_group_form_alter(&$form, FormStateInterface $form_state, $form_id)
 {
@@ -96,12 +98,19 @@ function enrope_group_entity_base_field_info(EntityTypeInterface $entity_type) {
 }
 
 
+function enrope_group_group_view(array &$build, GroupInterface $node, $display, $view_mode) {
+  if ($view_mode == 'gro') {
+    $build['#cache']['max-age'] = 0;
+  }
+
+}
+
 /**
  * Implements hook_field_formatter_info_alter().
  */
-function enrope_group_field_formatter_info_alter(array &$info) {
-  $info['link']['field_types'][] = 'enrope_group_join_leave';
-}
+//function enrope_group_field_formatter_info_alter(array &$info) {
+//  $info['link']['field_types'][] = 'enrope_group_join_leave';
+//}
 
 /**
  * Implements hook_field_widget_info_alter().
