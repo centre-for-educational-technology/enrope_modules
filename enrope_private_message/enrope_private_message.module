@@ -5,3 +5,7 @@
  * Date: 22/11/2018
  * Time: 15:01
  */
+
+function enrope_private_message_form_private_message_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['actions']['submit']['#value'] = t('Send');
+}
