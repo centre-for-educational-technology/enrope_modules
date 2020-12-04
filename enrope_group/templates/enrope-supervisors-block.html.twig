@@ -1,0 +1,63 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+<h4>ENROPE team supervisors</h4>
+<div class="row jumbotron">
+  {% for user in users %}
+
+    <div class="col-sm-6 col-lg-4 mb-3">
+      <div class="card">
+        <div class="card-body text-center">
+
+          <a href="{{ path('entity.user.canonical', {'user': user.id}) }}">
+
+            <div class="views-field views-field-field-first-name">
+              <div class="field-content">
+
+                {{ user.field_first_name.value }}
+
+              </div>
+            </div>
+          </a>
+
+          <a href="{{ path('entity.user.canonical', {'user': user.id}) }}">
+            <div class="views-field views-field-user-picture">
+              <div class="field-content">
+                {% if (user.user_picture.entity.fileuri != NULL) %}
+                  <img src="{{ file_url(user.user_picture.entity.fileuri) }}"
+                       class="img-thumbnail image-style-avatar rounded-circle">
+                {% else %}
+                  <img src="{{ url('<front>') }}/{{ directory }}/img/user.png"
+                       class="img-thumbnail image-style-avatar rounded-circle">
+                {% endif %}
+
+              </div>
+            </div>
+          </a>
+
+          <div class="views-field views-field-group-roles">
+            <div class="field-content">
+              <div class="item-list">
+                <ul>
+                  <li>supervisor</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  {% endfor %}
+</div>
+<h4>Members</h4>

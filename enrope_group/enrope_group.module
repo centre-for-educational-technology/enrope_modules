@@ -164,3 +164,17 @@ function enrope_group_field_widget_info_alter(array &$info) {
 //    }
 //  }
 //}
+
+/**
+ * Implements hook_theme().
+ */
+function enrope_group_theme() {
+  return [
+    'enrope_supervisors_block' => [
+      'variables' => [
+        'users' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}
