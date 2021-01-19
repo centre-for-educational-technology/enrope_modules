@@ -1,0 +1,14 @@
+diff --git a/recaptcha.module b/recaptcha.module
+index 2b4b2a3..6d96b86 100644
+--- a/recaptcha.module
++++ b/recaptcha.module
+@@ -87,7 +87,8 @@ function recaptcha_captcha($op, $captcha_type = '') {
+ 
+           // As the validate callback does not depend on sid or solution, this
+           // captcha type can be displayed on cached pages.
+-          $captcha['cacheable'] = TRUE;
++          $captcha['cacheable'] = FALSE;
++          \Drupal::service('page_cache_kill_switch')->trigger();
+ 
+           // Check if reCAPTCHA use globally is enabled.
+           $recaptcha_src = 'https://www.google.com/recaptcha/api.js';
