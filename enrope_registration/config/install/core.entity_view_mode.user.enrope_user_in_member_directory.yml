@@ -1,0 +1,10 @@
+uuid: bc5fff66-0348-4cdf-8b31-094485531a84
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.enrope_user_in_member_directory
+label: enrope_user_in_member_directory
+targetEntityType: user
+cache: true

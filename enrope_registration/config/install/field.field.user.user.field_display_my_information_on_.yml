@@ -1,0 +1,24 @@
+uuid: 88e0224a-5350-4ccb-90b5-7ddac7d5d448
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_display_my_information_on_
+  module:
+    - user
+id: user.user.field_display_my_information_on_
+field_name: field_display_my_information_on_
+entity_type: user
+bundle: user
+label: 'Display my information on Member Directory Page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
