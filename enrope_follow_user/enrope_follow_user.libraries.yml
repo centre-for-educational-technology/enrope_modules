@@ -1,0 +1,10 @@
+# Custom module library for general purposes.
+enrope_follow_user:
+  js:
+    js/enrope-follow-user.js: {}
+  css:
+    component:
+      css/enrope-follow-user.css: {}
+  dependencies:
+    - core/drupalSettings
+    - enrope_follow_user/jquery-labelauty

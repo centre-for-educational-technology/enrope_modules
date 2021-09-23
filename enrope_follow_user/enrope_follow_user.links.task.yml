@@ -1,0 +1,7 @@
+enrope_follow_user.following:
+  route_name: enrope_follow_user.following
+  type: tab
+  title: 'My network'
+  description: ''
+  base_route: entity.user.canonical
+  weight: 7

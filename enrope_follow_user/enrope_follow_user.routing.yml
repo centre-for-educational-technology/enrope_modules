@@ -1,0 +1,30 @@
+enrope_follow_user.following:
+  path: 'user/{user}/following'
+  defaults:
+    _title: 'My network'
+    _controller: '\Drupal\enrope_follow_user\Controller\EnropeFollowUserController::build'
+  requirements:
+    _permission: 'access user profiles'
+    user: \d+
+
+
+enrope_follow_user.follow:
+  path: 'user/{user}/follow'
+  defaults:
+    _title: 'My network'
+    _controller: '\Drupal\enrope_follow_user\Controller\EnropeFollowUserController::follow'
+  requirements:
+    _permission: 'access user profiles'
+  options:
+    user: \d+
+
+
+enrope_follow_user.unfollow:
+  path: 'user/{user}/unfollow'
+  defaults:
+    _title: 'My network'
+    _controller: '\Drupal\enrope_follow_user\Controller\EnropeFollowUserController::unfollow'
+  requirements:
+    _permission: 'access user profiles'
+  options:
+    user: \d+
