@@ -6,6 +6,8 @@ enrope_follow_user.following:
   requirements:
     _permission: 'access user profiles'
     user: \d+
+  options:
+    no_cache: 'TRUE'
 
 
 enrope_follow_user.follow:
@@ -15,8 +17,9 @@ enrope_follow_user.follow:
     _controller: '\Drupal\enrope_follow_user\Controller\EnropeFollowUserController::follow'
   requirements:
     _permission: 'access user profiles'
-  options:
     user: \d+
+  options:
+    no_cache: 'TRUE'
 
 
 enrope_follow_user.unfollow:
@@ -26,5 +29,6 @@ enrope_follow_user.unfollow:
     _controller: '\Drupal\enrope_follow_user\Controller\EnropeFollowUserController::unfollow'
   requirements:
     _permission: 'access user profiles'
-  options:
     user: \d+
+  options:
+    no_cache: 'TRUE'
